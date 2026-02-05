@@ -1,20 +1,26 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/site'
+import { WhatsAppIcon } from './WhatsAppButton'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about/' },
+  { name: 'Makkah', href: '/makkah/' },
+  { name: 'Medinah', href: '/medinah/' },
   { name: 'Services', href: '/services/' },
-  { name: 'Property Guide', href: '/guide/' },
+  { name: 'About', href: '/about/' },
   { name: 'Contact', href: '/contact/' },
 ]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const encodedMessage = encodeURIComponent(siteConfig.contact.whatsappMessage)
+  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,49 +31,59 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-saudi-green rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
+              <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none">
+                <path d="M8 28 Q8 12 20 8 Q32 12 32 28 Z" className="fill-white" />
+                <circle cx="20" cy="10" r="3" className="fill-saudi-gold" />
+              </svg>
             </div>
-            <span className={`font-bold text-xl transition-colors ${
-              scrolled ? 'text-saudi-green' : 'text-white'
-            }`}>
-              SaudiProperty<span className="text-saudi-gold">Guide</span>
-            </span>
+            <div className="flex flex-col">
+              <span className={`font-bold text-lg leading-tight transition-colors ${scrolled ? 'text-saudi-green' : 'text-white'
+                }`}>
+                Haramain <span className="text-saudi-gold">Properties</span>
+              </span>
+              <span className={`text-xs transition-colors ${scrolled ? 'text-gray-500' : 'text-gray-300'
+                }`}>
+                Real Estate in Makkah & Medinah
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors hover:text-saudi-gold ${
-                  scrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className={`font-medium transition-colors hover:text-saudi-gold ${scrolled ? 'text-gray-700' : 'text-white'
+                  }`}
               >
                 {link.name}
               </Link>
             ))}
+
             <a
-              href="/contact/"
-              className="btn-secondary flex items-center space-x-2"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#1da851] text-white font-semibold py-2.5 px-5 rounded-lg transition-colors flex items-center space-x-2"
             >
-              <Phone className="w-4 h-4" />
-              <span>Book Consultation</span>
+              <WhatsAppIcon className="w-5 h-5" />
+              <span>WhatsApp</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
+            aria-label="Toggle menu"
           >
             {isOpen ? (
               <X className={`w-6 h-6 ${scrolled ? 'text-gray-900' : 'text-white'}`} />
@@ -80,7 +96,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="lg:hidden bg-white shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navLinks.map((link) => (
               <Link
@@ -93,10 +109,13 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/contact/"
-              className="btn-secondary w-full text-center mt-4 block"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-2 bg-[#25D366] hover:bg-[#1da851] text-white w-full text-center mt-4 py-3 rounded-lg font-semibold"
             >
-              Book Consultation
+              <WhatsAppIcon className="w-5 h-5" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>

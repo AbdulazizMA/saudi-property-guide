@@ -1,58 +1,46 @@
 import { Metadata } from 'next'
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
+import WhatsAppButton, { WhatsAppIcon } from '@/components/WhatsAppButton'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | SaudiPropertyGuide.com',
-  description: 'Book a consultation or get in touch with our Saudi real estate experts. We help foreigners buy property in Saudi Arabia.',
+  title: 'Contact Abdulaziz Mofleh | Makkah & Medinah Real Estate',
+  description: 'Get in touch with Abdulaziz Mofleh for property inquiries in Makkah and Medinah. WhatsApp, email, or book a consultation. Available in English and Arabic.',
 }
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: 'Phone',
-    value: siteConfig.contact.phone,
-    href: `tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    value: siteConfig.contact.email,
-    href: `mailto:${siteConfig.contact.email}`
-  },
-  {
-    icon: MapPin,
-    title: 'Office',
-    value: siteConfig.contact.address
-  },
-  {
-    icon: Clock,
-    title: 'Business Hours',
-    value: siteConfig.contact.hours
-  },
-]
-
 export default function ContactPage() {
+  const encodedMessage = encodeURIComponent(siteConfig.contact.whatsappMessage)
+  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`
+
   return (
-    <>
+    <main>
       {/* Hero */}
       <section className="relative py-32 bg-saudi-green-dark">
-        <div className="absolute inset-0 opacity-20">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-            }}
-          />
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="contactGeo" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="30" cy="30" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#contactGeo)" />
+          </svg>
+          <div className="absolute top-1/3 -left-20 w-80 h-80 bg-saudi-gold/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-10 -right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Get in <span className="text-saudi-gold">Touch</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            Ready to start your Saudi property journey? Book a consultation or reach out 
-            to our team. We're here to help you every step of the way.
+            Ready to explore property near the Holy Mosques? Reach out and let&apos;s discuss
+            your goals. Free initial consultation — no obligation.
           </p>
         </div>
       </section>
@@ -64,127 +52,156 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-1">
               <div className="bg-saudi-green rounded-2xl p-8 text-white">
-                <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-2">Contact Abdulaziz</h2>
                 <p className="text-gray-200 mb-8">
-                  Reach out to us through any of these channels. We typically respond within 24 hours.
+                  WhatsApp is the fastest way to reach me. I respond to all inquiries personally.
                 </p>
 
                 <div className="space-y-6">
-                  {contactInfo.map((item) => (
-                    item.href ? (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="flex items-start space-x-4 group"
-                      >
-                        <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-saudi-gold transition-colors">
-                          <item.icon className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-300">{item.title}</p>
-                          <p className="font-medium">{item.value}</p>
-                        </div>
-                      </a>
-                    ) : (
-                      <div
-                        key={item.title}
-                        className="flex items-start space-x-4"
-                      >
-                        <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-300">{item.title}</p>
-                          <p className="font-medium">{item.value}</p>
-                        </div>
-                      </div>
-                    )
-                  ))}
+                  {/* WhatsApp - Primary */}
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-4 group bg-white/10 rounded-xl p-4 hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-12 h-12 bg-[#25D366] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <WhatsAppIcon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-green-300 font-semibold">WhatsApp (Fastest)</p>
+                      <p className="font-medium">{siteConfig.contact.phone}</p>
+                      <p className="text-xs text-gray-300 mt-1">Typically reply within a few hours</p>
+                    </div>
+                  </a>
+
+                  {/* Email */}
+                  <a
+                    href={`mailto:${siteConfig.contact.email}`}
+                    className="flex items-start space-x-4 group"
+                  >
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-saudi-gold transition-colors">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Email</p>
+                      <p className="font-medium">{siteConfig.contact.email}</p>
+                    </div>
+                  </a>
+
+                  {/* Phone */}
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                    className="flex items-start space-x-4 group"
+                  >
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-saudi-gold transition-colors">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Phone</p>
+                      <p className="font-medium">{siteConfig.contact.phone}</p>
+                    </div>
+                  </a>
+
+                  {/* Location */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Location</p>
+                      <p className="font-medium">{siteConfig.contact.address}</p>
+                    </div>
+                  </div>
+
+                  {/* Languages */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Languages</p>
+                      <p className="font-medium">English & Arabic</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="text-sm text-gray-300 mb-4">Prefer instant messaging?</p>
-                  <a
-                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-colors"
+                  <WhatsAppButton
+                    variant="primary"
+                    size="lg"
+                    className="w-full justify-center"
                   >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Chat on WhatsApp</span>
-                  </a>
+                    Chat with Abdulaziz
+                  </WhatsAppButton>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Calendly Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Book a <span className="text-gradient">Free Consultation</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Schedule your complimentary 15-minute consultation. Choose a time that works for you, 
-              and we'll discuss your property goals and how we can help.
-            </p>
-          </div>
-
-          <div className="bg-gray-50 rounded-2xl p-8">
-            {/* Calendly Inline Embed Placeholder */}
-            <div className="bg-white rounded-xl shadow-inner p-8 text-center min-h-[600px] flex flex-col items-center justify-center">
-              <div className="w-20 h-20 bg-saudi-green/10 rounded-full flex items-center justify-center mb-6">
-                <Clock className="w-10 h-10 text-saudi-green" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Calendar Integration</h3>
-              <p className="text-gray-600 mb-6 max-w-md">
-                To enable booking, integrate your Calendly or Cal.com account here. 
-                Replace this section with your scheduling widget.
-              </p>
-              
-              <div className="space-y-4">
-                <a
-                  href="https://calendly.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center space-x-2"
-                >
-                  <span>Set Up Calendly</span>
-                </a>
-                
-                <p className="text-sm text-gray-500">
-                  Or integrate with{' '}
-                  <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="text-saudi-green hover:underline">
-                    Cal.com
-                  </a>
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Send a Message</h2>
+                <p className="text-gray-600 mb-8">
+                  Fill out the form below and I&apos;ll get back to you as soon as possible.
+                  For a faster response, use WhatsApp.
                 </p>
-              </div>
-
-              <div className="mt-8 p-4 bg-gray-100 rounded-lg text-left max-w-lg">
-                <p className="text-sm font-medium text-gray-700 mb-2">Integration Code Example:</p>
-                <pre className="text-xs text-gray-600 overflow-x-auto">
-{`// Install: npm install react-calendly
-
-import { InlineWidget } from "react-calendly";
-
-<InlineWidget 
-  url="https://calendly.com/YOUR_USERNAME"
-  styles={{ height: '600px' }}
-/>`}
-                </pre>
+                <ContactForm />
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* FAQ Mini Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Common Questions</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-2">What&apos;s the best way to reach you?</h3>
+              <p className="text-gray-600 text-sm">
+                WhatsApp is the fastest. I typically respond within a few hours.
+                You can also email me for detailed inquiries.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-2">What time zone are you in?</h3>
+              <p className="text-gray-600 text-sm">
+                I&apos;m based in Makkah, Saudi Arabia (AST, UTC+3).
+                I&apos;m flexible with scheduling calls across time zones.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-2">Is the initial consultation free?</h3>
+              <p className="text-gray-600 text-sm">
+                Yes. The first consultation to discuss your needs and goals is completely free
+                with no obligation.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-2">Can you help if I&apos;m overseas?</h3>
+              <p className="text-gray-600 text-sm">
+                Most of my clients are based abroad. I handle everything locally in Makkah
+                while keeping you informed via WhatsApp, email, and video calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-gray-600 mb-6">
+            I speak English and Arabic — reach out in whichever language you prefer.
+          </p>
+          <p className="text-gray-500 text-sm">
+            Abdulaziz Mofleh | Licensed Real Estate Agent | Makkah, Saudi Arabia
+          </p>
+        </div>
+      </section>
+    </main>
   )
 }

@@ -1,0 +1,13 @@
+# Robots.txt for Abdulaziz Mofleh Real Estate
+# https://saudipropertyguide.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://saudipropertyguide.com/sitemap.xml
+
+# Disallow admin/API paths if any exist
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/

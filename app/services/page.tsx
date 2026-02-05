@@ -1,120 +1,92 @@
 import { Metadata } from 'next'
-import { Calendar, Search, Scale, BarChart3, Check, Clock, Shield, Headphones } from 'lucide-react'
+import { Search, Building2, Check, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Our Services | SaudiPropertyGuide.com',
-  description: 'Comprehensive real estate consultation services for foreigners buying property in Saudi Arabia.',
+  title: 'Services | Property Search & Management in Makkah & Medinah',
+  description: 'Property search, acquisition, and management services for Makkah and Medinah. Abdulaziz Mofleh helps Muslims worldwide own and manage Holy Cities property.',
 }
 
 const services = [
   {
-    icon: Calendar,
-    title: 'Free 15-Minute Consultation',
-    description: 'Start your Saudi property journey with a complimentary consultation. We\'ll discuss your goals, budget, timeline, and answer all your questions about buying property as a foreigner.',
-    price: 'FREE',
-    duration: '15 minutes',
-    features: [
-      'Personalized investment strategy',
-      'Overview of Saudi real estate market',
-      'Location recommendations based on your needs',
-      'Q&A on foreign ownership laws',
-      'Budget planning guidance',
-      'Next steps roadmap'
-    ],
-    popular: false
-  },
-  {
     icon: Search,
-    title: 'Premium Property Search',
-    description: 'Comprehensive property search service tailored to your specific requirements. We handle everything from property identification to final negotiations.',
-    price: 'SAR 5,000 - 15,000',
-    duration: '2-8 weeks',
+    title: 'Property Search & Acquisition',
+    description: 'I personally help you find and purchase your ideal property in Makkah or Medinah. From initial search to final registration, I handle everything while you\'re overseas.',
     features: [
-      'Detailed needs assessment',
-      'Curated property selection (5-15 options)',
-      'Virtual or in-person property viewings',
-      'Market analysis and price benchmarking',
-      'Negotiation support with sellers',
-      'Documentation and paperwork assistance',
-      'Post-purchase support for 30 days'
-    ],
-    popular: true
-  },
-  {
-    icon: Scale,
-    title: 'Legal Guidance Package',
-    description: 'Expert legal support to ensure your property purchase is secure and compliant with all Saudi regulations. Peace of mind throughout the transaction.',
-    price: 'SAR 3,000 - 8,000',
-    duration: 'Per transaction',
-    features: [
-      'Contract review and analysis',
+      'Personalized property matching based on your needs',
+      'Virtual viewings via video call or in-person tours',
+      'Price negotiation on your behalf',
+      'Full documentation and paperwork support',
       'Title verification and due diligence',
-      'Legal compliance check',
-      'Notary coordination and attendance',
-      'Government document processing',
-      'Ownership transfer assistance',
-      'Legal representation if needed'
+      'Liaison with lawyers and notaries',
+      'Registration assistance',
+      'Post-purchase support',
     ],
-    popular: false
+    process: [
+      { step: 'Discovery Call', desc: 'We discuss your goals, budget, and preferences' },
+      { step: 'Property Search', desc: 'I curate a selection of properties matching your criteria' },
+      { step: 'Viewings', desc: 'Virtual tours or I accompany you for in-person visits' },
+      { step: 'Negotiation', desc: 'I negotiate the best price on your behalf' },
+      { step: 'Purchase', desc: 'I handle all paperwork and coordinate with lawyers' },
+      { step: 'Registration', desc: 'Your property is officially registered in your name' },
+    ],
+    highlight: true,
   },
   {
-    icon: BarChart3,
-    title: 'Investment Analysis',
-    description: 'Data-driven investment analysis to help you make informed decisions. Ideal for investors looking to maximize returns and build a property portfolio.',
-    price: 'SAR 4,000 - 12,000',
-    duration: '1-2 weeks',
+    icon: Building2,
+    title: 'Property Management',
+    description: 'Living overseas? I manage your Makkah or Medinah property so you don\'t have to worry. Ideal for rental properties, second homes, or investment units.',
     features: [
-      'ROI projections and analysis',
-      'Comprehensive market research',
-      'Portfolio diversification strategy',
-      'Risk assessment report',
-      'Rental yield calculations',
-      'Exit strategy recommendations',
-      'Quarterly market updates (1 year)'
+      'Tenant sourcing and screening',
+      'Lease agreement preparation',
+      'Rent collection and transfer',
+      'Maintenance coordination',
+      'Regular property inspections',
+      'Monthly reporting with photos',
+      'Emergency response handling',
+      'Utility and bill management',
     ],
-    popular: false
-  },
-]
-
-const addOns = [
-  {
-    title: 'Mortgage Assistance',
-    description: 'Help securing financing from Saudi banks for qualified foreign buyers',
-    price: 'SAR 2,000'
-  },
-  {
-    title: 'Property Management Setup',
-    description: 'Connect with trusted property management for rental properties',
-    price: 'SAR 1,500'
-  },
-  {
-    title: 'Residency Visa Support',
-    description: 'Guidance on property-based residency (Premium Residency) applications',
-    price: 'SAR 3,000'
+    process: [
+      { step: 'Property Assessment', desc: 'I evaluate your property and discuss your goals' },
+      { step: 'Marketing', desc: 'I advertise to quality tenants (pilgrims, families, professionals)' },
+      { step: 'Tenant Placement', desc: 'I screen and place reliable tenants' },
+      { step: 'Ongoing Management', desc: 'I handle all day-to-day operations' },
+      { step: 'Reporting', desc: 'You receive monthly updates and financial reports' },
+    ],
+    highlight: false,
   },
 ]
 
 export default function ServicesPage() {
   return (
-    <>
+    <main>
       {/* Hero */}
       <section className="relative py-32 bg-saudi-green-dark">
-        <div className="absolute inset-0 opacity-20">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-            }}
-          />
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="servicesGeo" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="30" cy="30" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#servicesGeo)" />
+          </svg>
+          <div className="absolute top-1/4 -right-20 w-96 h-96 bg-saudi-gold/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-saudi-gold">Services</span>
+            My <span className="text-saudi-gold">Services</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            From free consultations to comprehensive property search and legal support, 
-            we offer services tailored to every stage of your Saudi real estate journey.
+            Two focused services to help Muslims worldwide own and manage
+            property near the Holy Mosques in Makkah and Medinah.
           </p>
         </div>
       </section>
@@ -122,63 +94,67 @@ export default function ServicesPage() {
       {/* Services */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-16">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={service.title}
-                className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
-                  service.popular ? 'ring-2 ring-saudi-gold' : ''
-                }`}
+                className={`bg-white rounded-3xl shadow-lg overflow-hidden ${service.highlight ? 'ring-2 ring-saudi-green' : ''}`}
               >
-                {service.popular && (
-                  <div className="absolute top-0 right-0 bg-saudi-gold text-white text-sm font-semibold px-4 py-1 rounded-bl-lg">
-                    Most Popular
+                {service.highlight && (
+                  <div className="bg-saudi-green text-white text-center py-2 text-sm font-semibold">
+                    Most Requested Service
                   </div>
                 )}
 
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-14 h-14 bg-saudi-green rounded-xl flex items-center justify-center">
-                      <service.icon className="w-7 h-7 text-white" />
-                    </div>
+                <div className="p-8 lg:p-12">
+                  <div className="grid lg:grid-cols-2 gap-12">
+                    {/* Left: Service Info */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                      <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {service.duration}
-                        </span>
+                      <div className="flex items-center space-x-4 mb-6">
+                        <div className="w-16 h-16 bg-saudi-green/10 rounded-2xl flex items-center justify-center">
+                          <service.icon className="w-8 h-8 text-saudi-green" />
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{service.title}</h2>
+                      </div>
+
+                      <p className="text-gray-600 text-lg mb-8">{service.description}</p>
+
+                      <h3 className="font-bold text-gray-900 mb-4">What&apos;s Included:</h3>
+                      <div className="grid sm:grid-cols-2 gap-3 mb-8">
+                        {service.features.map((feature) => (
+                          <div key={feature} className="flex items-start space-x-2">
+                            <Check className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-700 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <WhatsAppButton
+                        message={`Assalamu Alaikum Abdulaziz, I found your website and I'm interested in your ${service.title} service for property in Makkah/Medinah. Could we discuss?`}
+                        size="lg"
+                      >
+                        Inquire About This Service
+                      </WhatsAppButton>
+                    </div>
+
+                    {/* Right: Process */}
+                    <div className="bg-gray-50 rounded-2xl p-6">
+                      <h3 className="font-bold text-gray-900 mb-6">How It Works:</h3>
+                      <div className="space-y-4">
+                        {service.process.map((step, i) => (
+                          <div key={i} className="flex items-start space-x-4">
+                            <div className="w-8 h-8 bg-saudi-green text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                              {i + 1}
+                            </div>
+                            <div>
+                              <p className="font-semibold text-gray-900">{step.step}</p>
+                              <p className="text-gray-600 text-sm">{step.desc}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
-
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-
-                  <div className="mb-6">
-                    <span className={`text-2xl font-bold ${service.price === 'FREE' ? 'text-saudi-green' : 'text-saudi-gold'}`}>
-                      {service.price}
-                    </span>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-start space-x-3">
-                        <Check className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href="/contact/"
-                    className={`block text-center py-3 rounded-lg font-semibold transition-colors ${
-                      service.popular 
-                        ? 'btn-secondary' 
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
-                  >
-                    Book This Service
-                  </Link>
                 </div>
               </div>
             ))}
@@ -186,60 +162,54 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Add-ons */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Additional <span className="text-gradient">Services</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Enhance your package with these specialized services.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {addOns.map((addon) => (
-              <div key={addon.title} className="border border-gray-200 rounded-xl p-6 hover:border-saudi-green transition-colors">
-                <h3 className="font-bold text-gray-900 mb-2">{addon.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{addon.description}</p>
-                <p className="text-saudi-gold font-bold">{addon.price}</p>
-              </div>
-            ))}
-          </div>
+      {/* Pricing Note */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Pricing</h2>
+          <p className="text-gray-600 mb-6">
+            My fees depend on the scope of work and property value. I believe in transparent,
+            fair pricing with no hidden costs. Let&apos;s discuss your needs and I&apos;ll provide
+            a clear quote before we begin.
+          </p>
+          <p className="text-gray-600">
+            <strong>Important:</strong> I only take on clients I&apos;m confident I can help.
+            If I don&apos;t think I&apos;m the right fit for your situation, I&apos;ll tell you honestly.
+          </p>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20 bg-saudi-green-dark text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              How It <span className="text-saudi-gold">Works</span>
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Your journey to owning property in Saudi Arabia, simplified.
-            </p>
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-br from-saudi-green to-saudi-green-dark">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-200 mb-8">
+            Whether you&apos;re looking to buy or need help managing an existing property,
+            let&apos;s talk about how I can help.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <WhatsAppButton
+              variant="white"
+              size="lg"
+            >
+              Start a Conversation
+            </WhatsAppButton>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-saudi-green font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+            >
+              <span>Contact Form</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'Initial Consultation', desc: 'Free 15-min call to discuss your goals' },
-              { step: '02', title: 'Strategy & Search', desc: 'We curate properties matching your criteria' },
-              { step: '03', title: 'Viewings & Selection', desc: 'Virtual or in-person property tours' },
-              { step: '04', title: 'Purchase & Registration', desc: 'Legal support through closing' },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-16 h-16 bg-saudi-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-saudi-gold">{item.step}</span>
-                </div>
-                <h3 className="font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-300 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-6 text-sm text-gray-300">
+            Abdulaziz Mofleh | Licensed Real Estate Agent | Makkah, Saudi Arabia
+          </p>
         </div>
       </section>
-    </>
+    </main>
   )
 }

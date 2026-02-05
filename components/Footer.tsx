@@ -1,70 +1,74 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
+import { siteConfig } from '@/lib/site'
+import { WhatsAppIcon } from './WhatsAppButton'
 
 const footerLinks = {
-  company: [
-    { name: 'About Us', href: '/about/' },
-    { name: 'Our Services', href: '/services/' },
-    { name: 'Property Guide', href: '/guide/' },
-    { name: 'Contact', href: '/contact/' },
+  locations: [
+    { name: 'Makkah Properties', href: '/makkah/' },
+    { name: 'Medinah Properties', href: '/medinah/' },
+  ],
+  services: [
+    { name: 'Property Search', href: '/services/' },
+    { name: 'Property Management', href: '/services/' },
   ],
   resources: [
     { name: 'Buying Guide', href: '/guide/' },
-    { name: 'Legal Requirements', href: '/guide/#legal' },
-    { name: 'Financing Options', href: '/guide/#financing' },
-    { name: 'FAQ', href: '/guide/#faq' },
-  ],
-  legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Cookie Policy', href: '#' },
+    { name: 'About Us', href: '/about/' },
+    { name: 'Contact', href: '/contact/' },
   ],
 }
 
-const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: '#' },
-  { name: 'Twitter', icon: Twitter, href: '#' },
-  { name: 'LinkedIn', icon: Linkedin, href: '#' },
-  { name: 'Instagram', icon: Instagram, href: '#' },
-]
-
 export default function Footer() {
+  const encodedMessage = encodeURIComponent(siteConfig.contact.whatsappMessage)
+  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`
+
   return (
     <footer className="bg-saudi-green-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
+            <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-saudi-gold rounded-lg flex items-center justify-center">
-                <span className="text-saudi-green-dark font-bold text-xl">S</span>
+                <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none">
+                  <path d="M8 28 Q8 12 20 8 Q32 12 32 28 Z" className="fill-saudi-green-dark" />
+                  <circle cx="20" cy="10" r="3" className="fill-white" />
+                </svg>
               </div>
-              <span className="font-bold text-xl">
-                SaudiProperty<span className="text-saudi-gold">Guide</span>
-              </span>
+              <div>
+                <span className="font-bold text-xl block">
+                  Haramain <span className="text-saudi-gold">Properties</span>
+                </span>
+                <span className="text-xs text-gray-400">Real Estate in the Holy Cities</span>
+              </div>
             </div>
-            <p className="text-gray-300 mb-6">
-              Your trusted partner for buying property in Saudi Arabia. We help foreigners navigate the real estate market with confidence.
+            <p className="text-gray-300 mb-6 text-sm">
+              Helping Muslims worldwide own property in Makkah and Medinah.
+              Your trusted partner for homes near the Holy Mosques.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-saudi-gold transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
+              <span>Languages:</span>
+              <span className="text-white">English & Arabic</span>
             </div>
           </div>
 
-          {/* Company Links */}
+          {/* Locations */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-saudi-gold">Company</h3>
+            <h3 className="font-bold text-lg mb-6 text-saudi-gold">Locations</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
+              {footerLinks.locations.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="font-bold text-lg mb-4 mt-8 text-saudi-gold">Services</h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
@@ -90,43 +94,60 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-saudi-gold">Contact Us</h3>
+            <h3 className="font-bold text-lg mb-6 text-saudi-gold">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-saudi-gold flex-shrink-0 mt-0.5" />
                 <span className="text-gray-300">
-                  King Fahd Road, Riyadh<br />
-                  Saudi Arabia
+                  Makkah, Saudi Arabia
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-saudi-gold flex-shrink-0" />
-                <a href="tel:+966501234567" className="text-gray-300 hover:text-white transition-colors">
-                  +966 50 123 4567
+                <a href={`tel:${siteConfig.contact.phone}`} className="text-gray-300 hover:text-white transition-colors">
+                  {siteConfig.contact.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-saudi-gold flex-shrink-0" />
-                <a href="mailto:info@saudipropertyguide.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@saudipropertyguide.com
+                <a href={`mailto:${siteConfig.contact.email}`} className="text-gray-300 hover:text-white transition-colors text-sm">
+                  {siteConfig.contact.email}
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <WhatsAppIcon className="w-5 h-5 text-[#25D366] flex-shrink-0" />
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  WhatsApp
                 </a>
               </li>
             </ul>
+
+            {/* WhatsApp CTA */}
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>Chat Now</span>
+            </a>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} SaudiPropertyGuide.com. All rights reserved.
+            &copy; {new Date().getFullYear()} Haramain Properties. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            {footerLinks.legal.map((link) => (
-              <Link key={link.name} href={link.href} className="text-gray-400 text-sm hover:text-white transition-colors">
-                {link.name}
-              </Link>
-            ))}
-          </div>
+          <p className="text-gray-500 text-xs mt-2 md:mt-0">
+            Abdulaziz Mofleh, CEO & Founder | Licensed Real Estate Agent — Makkah, Saudi Arabia
+          </p>
         </div>
       </div>
     </footer>

@@ -48,4 +48,34 @@
   .text-gradient {
     @apply bg-gradient-to-r from-saudi-green to-saudi-gold bg-clip-text text-transparent;
   }
+
+  /* WhatsApp button styles */
+  .btn-whatsapp {
+    @apply bg-[#25D366] hover:bg-[#1da851] text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-flex items-center gap-2;
+  }
+}
+
+/* RTL Support for Arabic/Urdu */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .space-x-3 > * + * {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Arabic font utility */
+.font-arabic {
+  font-family: 'Noto Sans Arabic', sans-serif;
 }

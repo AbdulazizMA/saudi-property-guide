@@ -3,8 +3,8 @@ import { BookOpen, FileText, Search, Scale, Landmark, CreditCard, DollarSign, Pe
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Property Buying Guide | SaudiPropertyGuide.com',
-  description: 'A practical, high-level guide for foreign buyers exploring property in Saudi Arabia.',
+  title: 'Property Buying Guide | How to Buy Property in Makkah & Medinah',
+  description: 'A practical guide for Muslims buying property in Makkah and Medinah. Learn the process, requirements, and steps to own property near the Holy Mosques.',
 }
 
 const steps = [
@@ -182,20 +182,30 @@ export default function GuidePage() {
     <>
       {/* Hero */}
       <section className="relative py-32 bg-saudi-green-dark">
-        <div className="absolute inset-0 opacity-20">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
-            }}
-          />
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="guideGeo" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="30" cy="30" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="0" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="0" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+                <circle cx="60" cy="60" r="12" fill="none" stroke="white" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#guideGeo)" />
+          </svg>
+          <div className="absolute top-1/3 -left-10 w-72 h-72 bg-saudi-gold/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-16 -right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Property Buying <span className="text-saudi-gold">Guide</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            A practical overview of buying property in Saudi Arabia as a foreign buyer.
+            A practical overview of buying property in Makkah and Medinah.
+            Learn the process, requirements, and steps to own property near the Holy Mosques.
           </p>
         </div>
       </section>

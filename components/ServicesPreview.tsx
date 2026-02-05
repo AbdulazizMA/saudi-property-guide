@@ -1,43 +1,45 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, Search, Scale, BarChart3, ArrowRight } from 'lucide-react'
+import { Search, Building2, ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
 const services = [
   {
-    icon: Calendar,
-    title: 'Free 15-Min Consultation',
-    description: 'Get personalized advice on your property investment goals. We\'ll discuss your budget, preferred locations, and answer all your questions.',
-    price: 'FREE',
-    features: ['Personalized investment strategy', 'Market overview', 'Location recommendations', 'Q&A session']
-  },
-  {
     icon: Search,
-    title: 'Premium Property Search',
-    description: 'Comprehensive property search tailored to your requirements. We handle viewings, negotiations, and paperwork.',
-    price: 'From SAR 5,000',
-    features: ['Curated property selection', 'Virtual/in-person viewings', 'Price negotiation', 'Documentation support']
+    title: 'Property Search & Acquisition',
+    description: 'We help you find and purchase your ideal property in Makkah or Medinah. From initial search to final registration, we handle everything while you\'re overseas.',
+    features: [
+      'Personalized property matching',
+      'Virtual or in-person viewings',
+      'Price negotiation on your behalf',
+      'Full documentation support',
+      'Title verification',
+      'Registration assistance',
+    ],
+    cta: 'Start Your Search',
+    highlight: true,
   },
   {
-    icon: Scale,
-    title: 'Legal Guidance',
-    description: 'Expert legal support through the entire purchase process. Contract review, title verification, and compliance assurance.',
-    price: 'From SAR 3,000',
-    features: ['Contract review', 'Title verification', 'Legal compliance', 'Notary coordination']
-  },
-  {
-    icon: BarChart3,
-    title: 'Investment Analysis',
-    description: 'In-depth ROI analysis and portfolio planning. We help you make data-driven investment decisions.',
-    price: 'From SAR 4,000',
-    features: ['ROI projections', 'Market analysis', 'Portfolio planning', 'Risk assessment']
+    icon: Building2,
+    title: 'Property Management',
+    description: 'Living overseas? We manage your Makkah or Medinah property so you don\'t have to worry. Ideal for rental properties or second homes.',
+    features: [
+      'Tenant sourcing and screening',
+      'Rent collection',
+      'Maintenance coordination',
+      'Regular property inspections',
+      'Monthly reporting',
+      'Emergency response',
+    ],
+    cta: 'Learn More',
+    highlight: false,
   },
 ]
 
 export default function ServicesPreview() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
@@ -47,16 +49,16 @@ export default function ServicesPreview() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-gradient">Services</span>
+              How We Can <span className="text-gradient">Help You</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From initial consultation to closing the deal, we provide comprehensive 
-              support for every step of your property investment journey.
+              We offer two core services to help Muslims worldwide own and manage
+              property near the Holy Mosques.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -64,49 +66,42 @@ export default function ServicesPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100"
+              className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 ${service.highlight ? 'border-saudi-green' : 'border-transparent'}`}
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-saudi-green rounded-xl flex items-center justify-center"
-                >
-                  <service.icon className="w-7 h-7 text-white" />
+              {service.highlight && (
+                <div className="inline-block bg-saudi-green text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                  Most Popular
                 </div>
-                <span className={`font-bold text-lg ${service.price === 'FREE' ? 'text-saudi-green' : 'text-saudi-gold'}`}>
-                  {service.price}
-                </span>
+              )}
+
+              <div className="w-16 h-16 bg-saudi-green/10 rounded-2xl flex items-center justify-center mb-6">
+                <service.icon className="w-8 h-8 text-saudi-green" />
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
 
-              <ul className="space-y-2 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center space-x-2 text-sm text-gray-600">
-                    <span className="w-1.5 h-1.5 bg-saudi-gold rounded-full" />
-                    <span>{feature}</span>
-                  </li>
+                  <div key={feature} className="flex items-center space-x-2">
+                    <CheckCircle className="w-5 h-5 text-saudi-green flex-shrink-0" />
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               <Link
                 href="/services/"
-                className="inline-flex items-center space-x-2 text-saudi-green font-semibold hover:text-saudi-green-dark transition-colors"
+                className={`flex items-center justify-center space-x-2 w-full font-semibold py-3 px-6 rounded-xl transition-colors ${service.highlight
+                    ? 'bg-saudi-green hover:bg-saudi-green-dark text-white'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
               >
-                <span>Learn More</span>
+                <span>{service.cta}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/services/"
-            className="btn-primary inline-flex items-center space-x-2"
-          >
-            <span>View All Services</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
         </div>
       </div>
     </section>
