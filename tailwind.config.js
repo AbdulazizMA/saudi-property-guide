@@ -9,16 +9,17 @@ module.exports = {
     extend: {
       colors: {
         saudi: {
-          green: '#006C35',
-          'green-dark': '#004d26',
-          'green-light': '#1a8550',
-          gold: '#C5A028',
-          'gold-light': '#e6c55c',
-          'gold-dark': '#9a7b1a',
+          green: '#1F3A38',
+          'green-dark': '#152826',
+          'green-light': '#3E5E5B',
+          gold: '#C7A46A',
+          'gold-light': '#E7D5B7',
+          'gold-dark': '#9B7A44',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
         arabic: ['Noto Sans Arabic', 'sans-serif'],
       },
     },

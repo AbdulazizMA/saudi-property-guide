@@ -24,7 +24,7 @@ export default function Footer() {
   const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`
 
   return (
-    <footer className="bg-saudi-green-dark text-white">
+    <footer className="bg-[linear-gradient(135deg,_#142826_0%,_#1F3A38_50%,_#2B3E49_100%)] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -37,7 +37,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <span className="font-bold text-xl block">
+                <span className="font-display font-bold text-xl block">
                   Haramain <span className="text-saudi-gold">Properties</span>
                 </span>
                 <span className="text-xs text-gray-400">Real Estate in the Holy Cities</span>

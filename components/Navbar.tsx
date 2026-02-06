@@ -31,7 +31,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-lg backdrop-blur' : 'bg-transparent'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -44,7 +44,7 @@ export default function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className={`font-bold text-lg leading-tight transition-colors ${scrolled ? 'text-saudi-green' : 'text-white'
+              <span className={`font-display font-bold text-lg leading-tight transition-colors ${scrolled ? 'text-saudi-green' : 'text-white'
                 }`}>
                 Haramain <span className="text-saudi-gold">Properties</span>
               </span>
