@@ -50,7 +50,7 @@
   }
 
   .font-display {
-    @apply font-display;
+    font-family: 'Fraunces', 'Georgia', serif;
   }
 
   /* WhatsApp button styles */
