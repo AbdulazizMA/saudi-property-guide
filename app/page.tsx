@@ -1,8 +1,10 @@
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
-import WhyMakkahMedinah from '@/components/WhyMakkahMedinah'
 import TrustSection from '@/components/TrustSection'
+import ProcessSteps from '@/components/ProcessSteps'
+import WhyMakkahMedinah from '@/components/WhyMakkahMedinah'
 import ServicesPreview from '@/components/ServicesPreview'
+import Testimonials from '@/components/Testimonials'
 import CTASection from '@/components/CTASection'
 
 export default function Home() {
@@ -10,9 +12,11 @@ export default function Home() {
     <>
       <Hero />
       <Stats />
-      <WhyMakkahMedinah />
       <TrustSection />
+      <ProcessSteps />
       <ServicesPreview />
+      <WhyMakkahMedinah />
+      <Testimonials />
       <CTASection />
     </>
   )

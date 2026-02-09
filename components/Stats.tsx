@@ -1,32 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Globe, MapPin, Clock } from 'lucide-react'
+import { Shield, Home, MapPin, Headphones } from 'lucide-react'
 
 const stats = [
   {
     icon: Shield,
     value: 'Licensed',
-    label: 'Real Estate Agent',
-    description: 'Authorized in Saudi Arabia',
+    label: 'Saudi Real Estate Agent',
+    description: 'Fully authorized to transact in the Kingdom',
   },
   {
-    icon: Globe,
-    value: '2',
-    label: 'Languages',
-    description: 'English & Arabic',
+    icon: Home,
+    value: 'End-to-End',
+    label: 'Property Service',
+    description: 'From search to keys in your hand',
   },
   {
     icon: MapPin,
     value: 'Makkah',
-    label: 'Based',
-    description: 'Local knowledge & presence',
+    label: 'Born & Based',
+    description: 'I know every neighborhood personally',
   },
   {
-    icon: Clock,
-    value: 'Full',
-    label: 'Service',
-    description: 'End-to-end support',
+    icon: Headphones,
+    value: '7 Days',
+    label: 'Availability',
+    description: 'WhatsApp, calls, and video meetings',
   },
 ]
 

@@ -1,27 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Compass, Home, Sparkles } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
 import WhatsAppButton from './WhatsAppButton'
-
-const highlights = [
-  {
-    icon: Compass,
-    title: 'Local Guidance',
-    description: 'Neighborhood insight from a Makkah-based, licensed team.',
-  },
-  {
-    icon: Home,
-    title: 'End-to-End Help',
-    description: 'Search, negotiate, register, and manage while you stay abroad.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Faith-Centered Choices',
-    description: 'Homes near the Haramain with long-term barakah and peace.',
-  },
-]
 
 export default function Hero() {
   return (
@@ -59,15 +41,21 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-              Own Property Near the <span className="text-saudi-gold">Haramain</span>
+              Your Dream Home Near{' '}
+              <span className="text-saudi-gold">Masjid al-Haram</span>{' '}
+              Starts Here
             </h1>
-            <p className="text-xl sm:text-2xl text-slate-100 mb-6 max-w-2xl">
-              A trusted, Makkah-based team helping families worldwide buy, manage, and protect
-              real estate near Masjid al-Haram and Masjid an-Nabawi.
+            <p className="text-xl sm:text-2xl text-slate-100 mb-4 max-w-2xl">
+              Makkah-based licensed agent helping Muslim families worldwide
+              buy, manage, and protect real estate in the Holy Cities.
+            </p>
+            <p className="text-base text-white/70 mb-6 max-w-2xl">
+              Whether you live in London, New York, Toronto, or anywhere else &mdash;
+              I handle everything on the ground so you don&apos;t have to.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {['Licensed Agent', 'Makkah Based', 'English & Arabic'].map((badge) => (
+              {['Licensed Agent', 'Makkah Based', 'English & Arabic', 'Free Consultation'].map((badge) => (
                 <div
                   key={badge}
                   className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2"
@@ -80,54 +68,62 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start mb-6">
               <WhatsAppButton variant="primary" size="lg">
-                Start a Conversation
+                Chat on WhatsApp Now
               </WhatsAppButton>
 
               <Link
                 href="/contact/"
                 className="border border-white/60 text-white hover:bg-white hover:text-saudi-green flex items-center justify-center space-x-2 py-4 px-8 rounded-lg text-lg font-semibold transition-all"
               >
-                <span>Book a Free Consultation</span>
+                <span>Book Free Consultation</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
 
-            <p className="text-sm text-white/70">Free initial consultation — no obligation</p>
+            <p className="text-sm text-white/70">No obligation &middot; Response within hours &middot; Available in English &amp; Arabic</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="bg-white/10 backdrop-blur-lg border border-white/15 rounded-3xl p-8 shadow-2xl"
+            className="space-y-6"
           >
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-white/60">Our Promise</p>
-                <h2 className="font-display text-2xl text-white font-semibold">Clear, guided, faithful</h2>
+            {/* Social Proof Card */}
+            <div className="bg-white/10 backdrop-blur-lg border border-white/15 rounded-3xl p-8 shadow-2xl">
+              <div className="flex items-center gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <Star key={i} className="w-5 h-5 text-saudi-gold fill-saudi-gold" />
+                ))}
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-saudi-gold/20 flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-saudi-gold" />
+              <p className="text-white/90 text-lg italic mb-4">
+                &ldquo;Abdulaziz made buying property from overseas feel effortless.
+                He handled everything — from finding the right apartment near the Haram
+                to completing all the paperwork. Truly trustworthy.&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-saudi-gold/30 flex items-center justify-center text-white font-bold text-sm">
+                  AH
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">Ahmed H.</p>
+                  <p className="text-white/60 text-xs">Property Buyer from London, UK</p>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-5">
-              {highlights.map((item) => (
-                <div key={item.title} className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-saudi-gold" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-white/70 text-sm leading-relaxed">{item.description}</p>
-                  </div>
+            {/* Quick Stats */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { value: '100%', label: 'Personalized Service' },
+                { value: 'Hours', label: 'Response Time' },
+                { value: 'End-to-End', label: 'Full Support' },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-saudi-gold font-bold text-lg">{stat.value}</p>
+                  <p className="text-white/70 text-xs">{stat.label}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl bg-white/10 p-5 border border-white/10">
-              <p className="text-sm text-white/70">Next step</p>
-              <p className="text-white font-semibold">Share your budget, city preference, and timeline.</p>
             </div>
           </motion.div>
         </div>

@@ -21,9 +21,6 @@ export default function FloatingWhatsApp() {
       <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm py-2 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
         Chat with Abdulaziz
       </span>
-
-      {/* Pulse animation */}
-      <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
     </a>
   )
 }

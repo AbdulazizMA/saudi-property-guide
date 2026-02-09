@@ -2,27 +2,28 @@
 
 import { motion } from 'framer-motion'
 import { Heart, Users, TrendingUp, Sun } from 'lucide-react'
+import WhatsAppButton from './WhatsAppButton'
 
 const benefits = [
   {
     icon: Heart,
     title: 'Steps from the Haram',
-    description: 'Wake up to the Adhan from Masjid al-Haram and walk to Umrah whenever your heart desires.',
+    description: 'Wake up to the Adhan from Masjid al-Haram. Walk to Umrah whenever your heart desires. Live in the most blessed place on earth.',
   },
   {
     icon: Users,
     title: 'A Home for Generations',
-    description: 'Create a spiritual legacy and a place for Hajj, Ramadan, and blessed gatherings.',
+    description: 'Create a spiritual legacy for your family. A place for Hajj, Ramadan stays, and blessed gatherings — passed down through generations.',
   },
   {
     icon: TrendingUp,
     title: 'Investment with Barakah',
-    description: 'Steady appreciation and year-round rental demand from pilgrims.',
+    description: 'Makkah property values have seen steady appreciation year over year. Strong rental demand from millions of annual pilgrims.',
   },
   {
     icon: Sun,
     title: 'Retire Near the Kaaba',
-    description: 'Spend your golden years in the most blessed place on earth.',
+    description: 'Spend your golden years in prayer and peace. Many of our clients plan their Makkah property as their forever home.',
   },
 ]
 
@@ -39,7 +40,7 @@ export default function WhyMakkahMedinah() {
           >
             <p className="text-sm uppercase tracking-[0.3em] text-saudi-green/70 mb-4">Why It Matters</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Own Property in <span className="text-gradient">Makkah & Medinah</span>?
+              Why Own Property in <span className="text-gradient">Makkah &amp; Medinah</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               For Muslims around the world, owning a home near the Holy Mosques
@@ -81,12 +82,15 @@ export default function WhyMakkahMedinah() {
           className="mt-16 bg-[linear-gradient(120deg,_#1F3A38_0%,_#2B3E49_60%,_#3C2F22_100%)] rounded-3xl p-8 md:p-12 text-center text-white"
         >
           <p className="font-display text-2xl md:text-3xl font-semibold mb-4">
-            “The dream of every Muslim is to be near the House of Allah.”
+            &ldquo;The dream of every Muslim is to be near the House of Allah.&rdquo;
           </p>
-          <p className="text-white/80 max-w-2xl mx-auto">
-            Let us help you turn that dream into reality. Whether it is a small apartment
-            for Umrah visits or a family home for retirement, we will guide you every step of the way.
+          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+            Let me help you turn that dream into reality. Whether it is a small apartment
+            for Umrah visits or a family home for retirement — I will guide you every step of the way.
           </p>
+          <WhatsAppButton variant="white" size="lg">
+            Let&apos;s Discuss Your Dream Property
+          </WhatsAppButton>
         </motion.div>
       </div>
     </section>

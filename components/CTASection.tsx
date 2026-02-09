@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Phone, MessageSquare, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import WhatsAppButton from './WhatsAppButton'
 
@@ -15,34 +15,53 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Get Started</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Get Started Today</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Own Property<br />
             <span className="text-saudi-gold">Near the Holy Mosques?</span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Whether you are looking for a home near the Kaaba, an investment in Medinah,
-            or a place for your family to return to — let us make it happen.
+            or a place for your family to return to — let&apos;s make it happen.
           </p>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {['Free Consultation', 'No Obligation', 'Response Within Hours'].map((item) => (
+              <div key={item} className="flex items-center gap-2 text-white/80">
+                <CheckCircle className="w-4 h-4 text-saudi-gold" />
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton variant="white" size="lg">
-              Start a Conversation
+              Chat on WhatsApp Now
             </WhatsAppButton>
 
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center space-x-2 bg-saudi-gold hover:bg-saudi-gold-dark text-white font-semibold py-4 px-10 rounded-lg transition-colors text-lg"
             >
-              <span>Book a Free Consultation</span>
+              <span>Book Free Consultation</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <p className="mt-8 text-sm text-white/70">
-            Free initial consultation — available in English and Arabic
-          </p>
+          {/* Contact Methods */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-white/60 text-sm">
+            <a href="tel:+966561056054" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Phone className="w-4 h-4" />
+              <span>+966 56 105 6054</span>
+            </a>
+            <span className="hidden sm:inline">|</span>
+            <span className="flex items-center gap-2">
+              <MessageSquare className="w-4 h-4" />
+              <span>English &amp; Arabic</span>
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>
