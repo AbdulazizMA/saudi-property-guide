@@ -1,141 +1,133 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Compass, FileCheck2, MapPinned, ShieldCheck } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import WhatsAppButton from './WhatsAppButton'
 
+const proofPoints = [
+  { icon: ShieldCheck, label: 'Licensed Saudi real estate guidance' },
+  { icon: MapPinned, label: 'Makkah-based neighborhood insight' },
+  { icon: FileCheck2, label: 'Documented buying process' },
+]
+
+const buyingSteps = [
+  ['01', 'Clarify your budget, city, timeline, and ownership needs.'],
+  ['02', 'Shortlist realistic options with photos, video, and local context.'],
+  ['03', 'Check documents, negotiate terms, and coordinate registration.'],
+]
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden bg-[#10201e]">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(199,164,106,0.25),_transparent_55%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,_#142826_0%,_#1F3A38_45%,_#2B3E49_100%)]" />
-        <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="heroGlow" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#F9F2E6" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#F9F2E6" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="1440" height="900" fill="url(#heroGlow)" />
-          {[
-            [140, 120], [260, 80], [380, 160], [560, 110], [720, 150],
-            [900, 120], [1080, 90], [1220, 170], [1320, 110]
-          ].map(([cx, cy], i) => (
-            <circle key={i} cx={cx} cy={cy} r="2.5" fill="#E7D5B7" opacity="0.8" />
-          ))}
-        </svg>
+        <Image
+          src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1800&q=85"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_rgba(16,32,30,0.96)_0%,_rgba(16,32,30,0.82)_42%,_rgba(16,32,30,0.36)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,_rgba(16,32,30,0.82)_0%,_transparent_42%)]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-12 items-center">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-4 pb-12 pt-28 sm:px-6 lg:px-8 lg:pb-20">
+        <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-left"
+            className="w-full min-w-0 max-w-3xl text-left"
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <span className="text-saudi-gold font-semibold tracking-wide">Assalamu Alaikum</span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-md">
+              <Compass className="h-4 w-4 text-saudi-gold" />
+              <span className="text-sm font-semibold tracking-wide text-white/90">For buyers abroad seeking the Holy Cities</span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-              Your Dream Home Near{' '}
-              <span className="text-saudi-gold">Masjid al-Haram</span>{' '}
-              Starts Here
+            <h1 className="mb-6 max-w-[22rem] break-words font-display text-4xl font-bold leading-[1.02] text-white sm:max-w-full sm:text-6xl lg:text-7xl">
+              Holy Cities property, handled from the ground.
             </h1>
-            <p className="text-xl sm:text-2xl text-slate-100 mb-4 max-w-2xl">
-              Makkah-based licensed agent helping Muslim families worldwide
-              buy, manage, and protect real estate in the Holy Cities.
-            </p>
-            <p className="text-base text-white/70 mb-6 max-w-2xl">
-              Whether you live in London, New York, Toronto, or anywhere else &mdash;
-              I handle everything on the ground so you don&apos;t have to.
+            <p className="mb-8 max-w-[22rem] text-base leading-7 text-white/85 sm:max-w-2xl sm:text-xl sm:leading-8">
+              Haramain Properties helps Muslim families buy and manage real estate
+              in Makkah and Medinah with local representation, documented steps,
+              and direct access to Abdulaziz Mofleh.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              {['Licensed Agent', 'Makkah Based', 'English & Arabic', 'Free Consultation'].map((badge) => (
-                <div
-                  key={badge}
-                  className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2"
-                >
-                  <CheckCircle className="w-4 h-4 text-saudi-gold" />
-                  <span className="text-white text-sm font-medium">{badge}</span>
+            <div className="mb-9 grid max-w-2xl gap-3 sm:grid-cols-3">
+              {proofPoints.map((item) => (
+                <div key={item.label} className="rounded-xl border border-white/12 bg-white/10 p-4 backdrop-blur-md">
+                  <item.icon className="mb-3 h-5 w-5 text-saudi-gold" />
+                  <p className="text-sm font-semibold leading-5 text-white">{item.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-start mb-6">
+            <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:justify-start">
               <WhatsAppButton variant="primary" size="lg">
-                Chat on WhatsApp Now
+                Discuss My Property Goals
               </WhatsAppButton>
 
               <Link
                 href="/contact/"
-                className="border border-white/60 text-white hover:bg-white hover:text-saudi-green flex items-center justify-center space-x-2 py-4 px-8 rounded-lg text-lg font-semibold transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/60 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-white hover:text-saudi-green"
               >
-                <span>Book Free Consultation</span>
-                <ArrowRight className="w-5 h-5" />
+                <span>Book a Consultation</span>
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
 
-            <p className="text-sm text-white/70">No obligation &middot; Response within hours &middot; Available in English &amp; Arabic</p>
+            <p className="text-sm text-white/70">Free first conversation. English and Arabic. Based in Makkah.</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="space-y-6"
+            className="hidden lg:block"
           >
-            {/* Social Proof Card */}
-            <div className="bg-white/10 backdrop-blur-lg border border-white/15 rounded-3xl p-8 shadow-2xl">
-              <div className="flex items-center gap-1 mb-3">
-                {[1,2,3,4,5].map(i => (
-                  <Star key={i} className="w-5 h-5 text-saudi-gold fill-saudi-gold" />
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-7 shadow-2xl backdrop-blur-xl">
+              <div className="mb-6 flex items-start justify-between gap-6">
+                <div>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/55">Buying path</p>
+                  <h2 className="font-display text-3xl font-semibold leading-tight text-white">
+                    Search, verify, negotiate, register.
+                  </h2>
+                </div>
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-saudi-gold/20">
+                  <CheckCircle className="h-6 w-6 text-saudi-gold" />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {buyingSteps.map(([number, text]) => (
+                  <div key={number} className="flex gap-4 rounded-2xl border border-white/10 bg-white/10 p-4">
+                    <span className="text-sm font-bold text-saudi-gold">{number}</span>
+                    <p className="text-sm leading-6 text-white/78">{text}</p>
+                  </div>
                 ))}
               </div>
-              <p className="text-white/90 text-lg italic mb-4">
-                &ldquo;Abdulaziz made buying property from overseas feel effortless.
-                He handled everything — from finding the right apartment near the Haram
-                to completing all the paperwork. Truly trustworthy.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-saudi-gold/30 flex items-center justify-center text-white font-bold text-sm">
-                  AH
-                </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">Ahmed H.</p>
-                  <p className="text-white/60 text-xs">Property Buyer from London, UK</p>
-                </div>
-              </div>
-            </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { value: '100%', label: 'Personalized Service' },
-                { value: 'Hours', label: 'Response Time' },
-                { value: 'End-to-End', label: 'Full Support' },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/10">
-                  <p className="text-saudi-gold font-bold text-lg">{stat.value}</p>
-                  <p className="text-white/70 text-xs">{stat.label}</p>
-                </div>
-              ))}
+              <div className="mt-6 border-t border-white/12 pt-5">
+                <p className="text-sm leading-6 text-white/72">
+                  Built for overseas buyers who need a trusted person locally,
+                  not another listing page.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
 
       <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 sm:block"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2.4, repeat: Infinity }}
       >
-        <div className="w-7 h-11 border border-white/50 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-white/70 rounded-full mt-2" />
+        <div className="flex h-11 w-7 justify-center rounded-full border border-white/45">
+          <div className="mt-2 h-3 w-1.5 rounded-full bg-white/70" />
         </div>
       </motion.div>
     </section>
