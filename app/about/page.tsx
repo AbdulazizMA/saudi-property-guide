@@ -4,25 +4,25 @@ import { CheckCircle, GraduationCap, MapPin, Globe, Award, ArrowRight } from 'lu
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'About Us | Haramain Properties - Meet Our Founder',
-  description: 'Meet Abdulaziz Mofleh, CEO of Haramain Properties - born in Makkah, US-educated, licensed real estate agent helping Muslims own property near the Holy Mosques.',
+  title: 'About Haramain Properties',
+  description: 'Meet Abdulaziz Mofleh, the Makkah-based founder of Haramain Properties, providing buyer representation and owner support for Makkah and Medinah real estate clients.',
 }
 
 const credentials = [
   {
     icon: Award,
     title: 'Licensed Real Estate Agent',
-    description: 'Fully licensed and authorized to conduct real estate transactions in Saudi Arabia',
+    description: 'Licensed local support for Saudi real estate search, coordination, and client representation',
   },
   {
     icon: MapPin,
     title: 'Makkah Native',
-    description: 'Born and raised in Makkah - I know every neighborhood, every street, every opportunity',
+    description: 'Born and raised in Makkah with local context that online listings cannot provide',
   },
   {
     icon: GraduationCap,
     title: 'US-Educated',
-    description: 'Bachelor of Science from an American university - I understand Western expectations',
+    description: 'Bachelor of Science from an American university, with a clear understanding of overseas buyer expectations',
   },
   {
     icon: Globe,
@@ -32,11 +32,11 @@ const credentials = [
 ]
 
 const whyWorkWithMe = [
-  'Personal service - you work directly with me, not a team',
-  'Local expertise - I grew up here and know the market intimately',
-  'International perspective - my US education helps me bridge cultural gaps',
-  'Full support - I handle everything while you\'re overseas',
-  'Trust and transparency - honest advice, no pressure tactics',
+  'Direct service - you work with me personally, not a call center',
+  'Local context - I help you understand the difference between a good listing and a good purchase',
+  'International perspective - I know the questions overseas buyers need answered clearly',
+  'Structured support - shortlisting, viewings, negotiation, document coordination, and owner care',
+  'Plain advice - if a property or route does not make sense, I will say so',
   'Flexible communication - WhatsApp, email, video calls at your convenience',
 ]
 
@@ -67,8 +67,8 @@ export default function AboutPage() {
             About <span className="text-saudi-gold">Haramain Properties</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            Founded by Abdulaziz Mofleh - Makkah local, US-educated, licensed real estate agent
-            helping Muslims worldwide own property near the Holy Mosques.
+            Founded by Abdulaziz Mofleh, a Makkah-based, US-educated real estate
+            professional representing serious buyers in Makkah and Medinah.
           </p>
         </div>
       </section>
@@ -83,24 +83,23 @@ export default function AboutPage() {
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
                 I was born and raised in Makkah, just minutes from the Holy Sites.
-                Growing up, I witnessed countless visitors from around the world
-                dreaming of owning a home in this blessed city.
+                I grew up seeing visitors from around the world form a deep connection
+                with the Haramain, then struggle to understand the property market from abroad.
               </p>
               <p>
                 After completing my Bachelor&apos;s degree in the United States, I returned
-                to Makkah with a unique perspective. I understand both the Western
-                mindset and the local Saudi market. I know what it&apos;s like to navigate
-                a foreign system, and I know Makkah like the back of my hand.
+                to Makkah with a practical perspective. I understand the questions
+                international buyers ask, the documentation they expect, and the local
+                details that rarely appear in an online listing.
               </p>
               <p>
-                Today, I help Muslim families from around the world turn their dream
-                of owning property near the Haramain into reality. Whether you&apos;re in
-                London, New York, Toronto, or anywhere else - I bridge the gap between
-                you and your Holy Cities property.
+                Today, I help Muslim families from around the world evaluate property
+                in Makkah and Medinah with a clearer process: define the brief, filter
+                the market, verify the basics, negotiate carefully, and plan ownership properly.
               </p>
               <p className="font-semibold text-gray-900">
                 When you work with me, you&apos;re working with someone who genuinely
-                understands your dream and has the local expertise to make it happen.
+                respects the meaning of the purchase and still treats it like a serious financial decision.
               </p>
             </div>
           </div>
@@ -151,19 +150,20 @@ export default function AboutPage() {
             <div className="bg-gradient-to-br from-saudi-green to-saudi-green-dark rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">My Promise to You</h3>
               <p className="text-gray-200 mb-6">
-                I treat every client like family. Your dream of owning property near
-                the Haramain is sacred to me. I will be honest, transparent, and work
-                tirelessly to find you the right property at the right price.
+                I will not push you toward the fastest deal. My role is to help you
+                understand what is realistic, what needs verification, and which options
+                are worth your time.
               </p>
               <p className="text-gray-200 mb-8">
                 If I don&apos;t think a property is right for you, I&apos;ll tell you. If I think
-                you&apos;re overpaying, I&apos;ll tell you. Your success is my success.
+                you&apos;re overpaying, I&apos;ll tell you. If eligibility or documentation needs
+                review first, we handle that before chasing properties.
               </p>
               <WhatsAppButton
                 variant="white"
                 size="lg"
                 className="w-full justify-center"
-                message="Assalamu Alaikum Abdulaziz, I read about your background on the Haramain Properties website. I'd like to discuss buying property in Makkah or Medinah."
+                message="Assalamu Alaikum Abdulaziz, I read about your background on the Haramain Properties website. I would like to discuss Makkah or Medinah property options. My budget, timeline, and intended use are:"
               >
                 Let&apos;s Talk About Your Goals
               </WhatsAppButton>
@@ -176,11 +176,11 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Start Your Property Journey?
+            Ready for a Clear Property Review?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Whether you have questions or are ready to start looking, I&apos;m here to help.
-            Reach out via WhatsApp for the fastest response.
+            Send the basics first: city, budget, timeline, intended use, and buyer profile.
+            That gives us a better first conversation.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

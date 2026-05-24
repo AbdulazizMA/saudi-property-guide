@@ -7,23 +7,23 @@ import WhatsAppButton from './WhatsAppButton'
 const benefits = [
   {
     icon: Heart,
-    title: 'Steps from the Haram',
-    description: 'Wake up to the Adhan from Masjid al-Haram. Walk to Umrah whenever your heart desires. Live in the most blessed place on earth.',
+    title: 'A Meaningful Base',
+    description: 'A property near the Haramain can support regular Umrah, Ramadan visits, retirement plans, or family stays with deeper purpose.',
   },
   {
     icon: Users,
-    title: 'A Home for Generations',
-    description: 'Create a spiritual legacy for your family. A place for Hajj, Ramadan stays, and blessed gatherings — passed down through generations.',
+    title: 'A Family Asset',
+    description: 'Many buyers want a place their family can return to again and again, with layout, access, and long-term care planned properly.',
   },
   {
     icon: TrendingUp,
-    title: 'Investment with Barakah',
-    description: 'Makkah property values have seen steady appreciation year over year. Strong rental demand from millions of annual pilgrims.',
+    title: 'Practical Investment Review',
+    description: 'Demand matters, but so do building quality, licensing, service costs, distance, management, and realistic rental assumptions.',
   },
   {
     icon: Sun,
-    title: 'Retire Near the Kaaba',
-    description: 'Spend your golden years in prayer and peace. Many of our clients plan their Makkah property as their forever home.',
+    title: 'Retirement Planning',
+    description: 'For buyers planning later-life stays, we look at comfort, healthcare access, transport, family needs, and local support.',
   },
 ]
 
@@ -40,11 +40,11 @@ export default function WhyMakkahMedinah() {
           >
             <p className="text-sm uppercase tracking-[0.3em] text-saudi-green/70 mb-4">Why It Matters</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Own Property in <span className="text-gradient">Makkah &amp; Medinah</span>?
+              Why Buyers Choose <span className="text-gradient">Makkah &amp; Medinah</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              For Muslims around the world, owning a home near the Holy Mosques
-              is more than an investment — it is a lifelong dream and a spiritual aspiration.
+              For Muslims around the world, property near the Holy Mosques is personal.
+              The decision still needs clear numbers, local context, and proper checks.
             </p>
           </motion.div>
         </div>
@@ -82,14 +82,14 @@ export default function WhyMakkahMedinah() {
           className="mt-16 bg-[linear-gradient(120deg,_#1F3A38_0%,_#2B3E49_60%,_#3C2F22_100%)] rounded-3xl p-8 md:p-12 text-center text-white"
         >
           <p className="font-display text-2xl md:text-3xl font-semibold mb-4">
-            &ldquo;The dream of every Muslim is to be near the House of Allah.&rdquo;
+            A meaningful purchase still deserves a disciplined process.
           </p>
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
-            Let me help you turn that dream into reality. Whether it is a small apartment
-            for Umrah visits or a family home for retirement — I will guide you every step of the way.
+            Whether you want a small apartment for Umrah visits, a family base, or a long-term
+            asset, I will help you evaluate the opportunity before you commit.
           </p>
           <WhatsAppButton variant="white" size="lg">
-            Let&apos;s Discuss Your Dream Property
+            Discuss Your Property Goals
           </WhatsAppButton>
         </motion.div>
       </div>

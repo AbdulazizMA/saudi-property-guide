@@ -3,26 +3,26 @@ import { BookOpen, FileText, Search, Scale, Landmark, CreditCard, DollarSign, Pe
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Property Buying Guide | How to Buy Property in Makkah & Medinah',
-  description: 'A practical guide for Muslims buying property in Makkah and Medinah. Learn the process, requirements, and steps to own property near the Holy Mosques.',
+  title: 'Property Buying Guide | Makkah & Medinah Buyer Checklist',
+  description: 'A practical buyer checklist for evaluating Makkah and Medinah property: eligibility, documents, due diligence, financing, costs, and owner planning.',
 }
 
 const steps = [
   {
     icon: BookOpen,
-    title: 'Define Goals and Budget',
-    description: 'Clarify your goals, timeline, and preferred locations before starting the search.',
+    title: 'Define the Buying Brief',
+    description: 'Clarify the city, use case, budget, timeline, and buyer profile before looking at listings.',
     details: [
       'Set a clear budget range and timeline',
-      'Identify preferred cities and neighborhoods',
+      'Identify preferred city and access requirements',
       'Decide on personal use vs. investment',
       'Review eligibility and ownership pathways',
     ],
   },
   {
     icon: FileText,
-    title: 'Prepare Eligibility and Documents',
-    description: 'Gather required documents and confirm eligibility for designated areas or projects.',
+    title: 'Review Eligibility and Documents',
+    description: 'Confirm which ownership routes may be available before you rely on any property shortlist.',
     details: [
       'Confirm residency and eligibility requirements',
       'Prepare identification and residency documents',
@@ -32,10 +32,10 @@ const steps = [
   },
   {
     icon: Search,
-    title: 'Shortlist and Review Properties',
-    description: 'Work with trusted professionals to compare listings and verify developer credentials.',
+    title: 'Shortlist Real Options',
+    description: 'Compare properties against location, building quality, access, cost, and long-term fit.',
     details: [
-      'Review vetted listings or developers',
+      'Review filtered listings or developers',
       'Schedule virtual or in-person viewings',
       'Compare pricing, fees, and amenities',
       'Validate project timelines and delivery',
@@ -43,8 +43,8 @@ const steps = [
   },
   {
     icon: Scale,
-    title: 'Legal Due Diligence',
-    description: 'Confirm title, approvals, and contract terms before committing.',
+    title: 'Due Diligence Coordination',
+    description: 'Confirm title, approvals, contracts, and payment terms before committing.',
     details: [
       'Verify ownership and title status',
       'Review approvals and compliance status',
@@ -204,8 +204,8 @@ export default function GuidePage() {
             Property Buying <span className="text-saudi-gold">Guide</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            A practical overview of buying property in Makkah and Medinah.
-            Learn the process, requirements, and steps to own property near the Holy Mosques.
+            A buyer checklist for Makkah and Medinah property: eligibility,
+            shortlisting, due diligence, costs, and ownership planning.
           </p>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function GuidePage() {
               Step-by-Step <span className="text-gradient">Process</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A high-level process to help you plan your purchase with confidence.
+              Use this as a working checklist before you rely on any listing or sales promise.
             </p>
           </div>
 

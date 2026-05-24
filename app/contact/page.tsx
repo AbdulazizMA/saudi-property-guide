@@ -5,8 +5,8 @@ import WhatsAppButton, { WhatsAppIcon } from '@/components/WhatsAppButton'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact Abdulaziz Mofleh | Makkah & Medinah Real Estate',
-  description: 'Get in touch with Abdulaziz Mofleh for property inquiries in Makkah and Medinah. WhatsApp, email, or book a consultation. Available in English and Arabic.',
+  title: 'Contact Abdulaziz Mofleh',
+  description: 'Contact Abdulaziz Mofleh for Makkah and Medinah property buyer representation, eligibility review, shortlisting, and owner support. Available in English and Arabic.',
 }
 
 export default function ContactPage() {
@@ -39,8 +39,8 @@ export default function ContactPage() {
             Get in <span className="text-saudi-gold">Touch</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            Ready to explore property near the Holy Mosques? Reach out and let&apos;s discuss
-            your goals. Free initial consultation — no obligation.
+            Send your city, budget, timeline, intended use, and buyer profile.
+            I will help you understand what is realistic before you spend time on listings.
           </p>
         </div>
       </section>
@@ -143,8 +143,8 @@ export default function ContactPage() {
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Send a Message</h2>
                 <p className="text-gray-600 mb-8">
-                  Fill out the form below and I&apos;ll get back to you as soon as possible.
-                  For a faster response, use WhatsApp.
+                  Share the basics: Makkah or Medinah, budget range, timeline, intended use,
+                  and whether you are buying from Saudi Arabia or abroad.
                 </p>
                 <ContactForm />
               </div>
@@ -183,8 +183,8 @@ export default function ContactPage() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-gray-900 mb-2">Can you help if I&apos;m overseas?</h3>
               <p className="text-gray-600 text-sm">
-                Most of my clients are based abroad. I handle everything locally in Makkah
-                while keeping you informed via WhatsApp, email, and video calls.
+                Most inquiries come from abroad. I handle local viewing, shortlisting,
+                coordination, and updates through WhatsApp, email, and video calls.
               </p>
             </div>
           </div>

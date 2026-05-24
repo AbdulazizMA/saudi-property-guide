@@ -4,29 +4,29 @@ import { MapPin, TrendingUp, Home, CheckCircle, ArrowRight, Building } from 'luc
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Buy Property in Makkah | Own a Home Near Masjid al-Haram',
-  description: 'Find apartments, villas, and investment properties in Makkah near the Holy Haram. Licensed local agent helping foreigners buy property in Makkah. Contact Abdulaziz Mofleh.',
+  title: 'Makkah Property Buyer Representation',
+  description: 'Explore Makkah property options with a local licensed agent. Shortlisting, neighborhood guidance, eligibility review, negotiation, and owner support for serious buyers.',
   keywords: [
     'buy property in Makkah',
     'Makkah real estate',
     'apartment near Haram',
     'property near Kaaba',
-    'Makkah property for foreigners',
+    'Makkah property for international buyers',
     'own home in Makkah',
     'Makkah investment property',
     'Makkah apartment for sale',
     'real estate agent Makkah',
   ],
   openGraph: {
-    title: 'Buy Property in Makkah | Own a Home Near Masjid al-Haram',
-    description: 'Licensed real estate agent helping Muslims worldwide own property near Masjid al-Haram in Makkah.',
+    title: 'Makkah Property Buyer Representation',
+    description: 'Local guidance for serious buyers evaluating property options in Makkah.',
   },
 }
 
 const propertyTypes = [
   {
     name: 'Apartments',
-    description: 'From studios to 4-bedroom units in prime locations',
+    description: 'Studios, family units, and serviced residences across practical Makkah locations',
     icon: Building,
   },
   {
@@ -36,7 +36,7 @@ const propertyTypes = [
   },
   {
     name: 'Investment Units',
-    description: 'High-yield properties for pilgrimage rental',
+    description: 'Units reviewed for demand, operating costs, and realistic rental potential',
     icon: TrendingUp,
   },
 ]
@@ -66,20 +66,20 @@ const neighborhoods = [
 
 const faqs = [
   {
-    question: 'Can foreigners buy property in Makkah?',
-    answer: 'Yes, under recent reforms, eligible foreigners can purchase property in designated areas of Makkah. I can help you understand the requirements and guide you through the process.',
+    question: 'Can non-Saudis buy property in Makkah?',
+    answer: 'Eligibility depends on nationality, residency status, property type, location, and current rules. The first step is not guessing; it is reviewing your profile and confirming the available pathway through qualified local channels.',
   },
   {
     question: 'What documents do I need?',
-    answer: 'You\'ll typically need a valid passport, proof of income, and in some cases, a residency permit. I handle all documentation requirements for my clients.',
+    answer: 'Requirements vary by buyer profile and transaction route. I help you organize the usual identity, residency, funding, and approval documents, then coordinate with the appropriate professionals before you commit.',
   },
   {
     question: 'How close to the Haram can I buy?',
     answer: 'Properties are available at various distances from Masjid al-Haram, from premium locations nearby to areas further out. Closer properties command higher prices.',
   },
   {
-    question: 'What is the rental yield in Makkah?',
-    answer: 'Makkah properties often see strong rental yields, especially during Hajj, Umrah season, and Ramadan. Many owners rent their properties to pilgrims when not using them.',
+    question: 'Is Makkah property good for rental income?',
+    answer: 'Demand can be strong in the right location, but income depends on distance, building quality, licensing, seasonality, service costs, and management. I help buyers compare the numbers before treating a property as an investment.',
   },
 ]
 
@@ -145,25 +145,25 @@ export default function MakkahPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <p className="text-saudi-gold font-arabic text-2xl mb-4">مكة المكرمة</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Buy Property in <span className="text-saudi-gold">Makkah</span>
+            Makkah Property, <span className="text-saudi-gold">Properly Vetted</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-            Own a home near Masjid al-Haram. Wake up to the Adhan, walk to Umrah,
-            and build a legacy for your family in the holiest city on earth.
+            For buyers abroad who want more than listings: local neighborhood context,
+            eligibility review, realistic pricing, and step-by-step representation.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton
-              message="Assalamu Alaikum Abdulaziz, I found your website and I'm interested in buying property in Makkah. Could we discuss my options?"
+              message="Assalamu Alaikum Abdulaziz, I found your Makkah page and want to review property options. My budget, timeline, and intended use are:"
               size="lg"
             >
-              Inquire About Makkah Properties
+              Review Makkah Options
             </WhatsAppButton>
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center space-x-2 bg-white text-saudi-green font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
-              <span>Book Consultation</span>
+              <span>Send Property Brief</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -175,20 +175,20 @@ export default function MakkahPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Strong</p>
-              <p className="text-gray-600 text-sm">Market Growth</p>
+              <p className="text-3xl font-bold text-saudi-green">Local</p>
+              <p className="text-gray-600 text-sm">Neighborhood Insight</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">High</p>
-              <p className="text-gray-600 text-sm">Rental Demand</p>
+              <p className="text-3xl font-bold text-saudi-green">Clear</p>
+              <p className="text-gray-600 text-sm">Eligibility Review</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Year-Round</p>
-              <p className="text-gray-600 text-sm">Pilgrim Traffic</p>
+              <p className="text-3xl font-bold text-saudi-green">Vetted</p>
+              <p className="text-gray-600 text-sm">Property Shortlists</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Premium</p>
-              <p className="text-gray-600 text-sm">Location Value</p>
+              <p className="text-3xl font-bold text-saudi-green">Direct</p>
+              <p className="text-gray-600 text-sm">Buyer Representation</p>
             </div>
           </div>
         </div>
@@ -199,10 +199,10 @@ export default function MakkahPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Own Property in <span className="text-gradient">Makkah</span>?
+              Why Buyers Focus on <span className="text-gradient">Makkah</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              For Muslims, there&apos;s no place on earth more meaningful than the city of the Kaaba.
+              Makkah is emotionally powerful, but the right purchase still needs a disciplined process.
             </p>
           </div>
 
@@ -211,11 +211,11 @@ export default function MakkahPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Spiritual Benefits</h3>
               <ul className="space-y-3">
                 {[
-                  'Live within walking distance of Masjid al-Haram',
-                  'Perform Umrah whenever you wish',
-                  'Pray in the holiest mosque in Islam daily',
-                  'Experience Ramadan and Hajj season from your home',
-                  'Build a spiritual legacy for future generations',
+                  'Compare realistic access times to Masjid al-Haram',
+                  'Understand how traffic and transport affect each neighborhood',
+                  'Plan for personal stays during Ramadan or Umrah visits',
+                  'Choose layouts that work for family use, not only photos',
+                  'Evaluate long-term fit before making an emotional decision',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
@@ -229,11 +229,11 @@ export default function MakkahPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Investment Benefits</h3>
               <ul className="space-y-3">
                 {[
-                  'Strong property value appreciation potential',
-                  'High rental yields during pilgrimage seasons',
-                  'Consistent demand from Hajj and Umrah visitors',
-                  'Limited supply in prime locations',
-                  'Tangible asset with long-term growth potential',
+                  'Compare asking prices against local market context',
+                  'Review rental assumptions before relying on them',
+                  'Check building quality, access, services, and ongoing costs',
+                  'Understand scarcity and pricing near premium locations',
+                  'Build a practical ownership plan for local management',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <TrendingUp className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
@@ -277,7 +277,7 @@ export default function MakkahPage() {
               Makkah Neighborhoods
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              I can help you find property in various areas of Makkah, each with its own advantages.
+              Each area has tradeoffs in access, price, building age, services, and resale appeal.
             </p>
           </div>
 
@@ -322,20 +322,19 @@ export default function MakkahPage() {
       <section className="py-20 bg-gradient-to-br from-saudi-green to-saudi-green-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Own Property in Makkah?
+            Ready to Evaluate Makkah Seriously?
           </h2>
           <p className="text-lg text-gray-200 mb-8">
-            Let me help you find your perfect property near Masjid al-Haram.
-            As a Makkah local, I know every neighborhood and can guide you to the best options.
+            Send your budget, timeline, intended use, and buyer profile. I will help you understand what is realistic before you waste time on weak listings.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton
-              message="Assalamu Alaikum Abdulaziz, I found your Makkah properties page and I'd like to learn more about buying near Masjid al-Haram. Could we talk?"
+              message="Assalamu Alaikum Abdulaziz, I found your Makkah properties page. I want a serious review of available options. My budget, timeline, and intended use are:"
               size="lg"
               variant="white"
             >
-              Chat About Makkah Properties
+              Start a Makkah Review
             </WhatsAppButton>
           </div>
 

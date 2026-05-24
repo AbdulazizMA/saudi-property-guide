@@ -9,8 +9,8 @@ const footerLinks = {
     { name: 'Medinah Properties', href: '/medinah/' },
   ],
   services: [
-    { name: 'Property Search', href: '/services/' },
-    { name: 'Property Management', href: '/services/' },
+    { name: 'Buyer Representation', href: '/services/' },
+    { name: 'Owner Support', href: '/services/' },
   ],
   resources: [
     { name: 'Buying Guide', href: '/guide/' },
@@ -40,12 +40,12 @@ export default function Footer() {
                 <span className="font-display font-bold text-xl block">
                   Haramain <span className="text-saudi-gold">Properties</span>
                 </span>
-                <span className="text-xs text-gray-400">Real Estate in the Holy Cities</span>
+                <span className="text-xs text-gray-400">Makkah & Medinah Buyer Representation</span>
               </div>
             </div>
             <p className="text-gray-300 mb-6 text-sm">
-              Helping Muslims worldwide own property in Makkah and Medinah.
-              Your trusted partner for homes near the Holy Mosques.
+              Local representation for serious buyers and owners in Makkah and Medinah.
+              Shortlisting, verification, negotiation, and owner support.
             </p>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <span>Languages:</span>

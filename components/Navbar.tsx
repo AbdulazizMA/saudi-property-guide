@@ -50,7 +50,7 @@ export default function Navbar() {
               </span>
               <span className={`text-xs transition-colors ${scrolled ? 'text-gray-500' : 'text-gray-300'
                 }`}>
-                Real Estate in Makkah & Medinah
+                Buyer Representation in Makkah & Medinah
               </span>
             </div>
           </Link>

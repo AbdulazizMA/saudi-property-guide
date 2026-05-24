@@ -6,23 +6,23 @@ import WhatsAppButton from './WhatsAppButton'
 const steps = [
   {
     number: '01',
-    title: 'Free Consultation',
-    description: 'Tell me about your goals, budget, preferred city, and timeline. I will give you an honest assessment of what is achievable.',
+    title: 'Buyer Brief',
+    description: 'Tell me your city, budget, timeline, intended use, and buyer profile. I will give you an honest first assessment.',
   },
   {
     number: '02',
-    title: 'Property Search',
-    description: 'I curate a selection of properties matching your criteria. You review them via video tours and photos from anywhere in the world.',
+    title: 'Market Shortlist',
+    description: 'I filter properties against your brief, access needs, quality expectations, and local pricing context.',
   },
   {
     number: '03',
-    title: 'Negotiation & Purchase',
-    description: 'I negotiate the best price, handle all legal paperwork, coordinate with lawyers, and guide you through the purchase process.',
+    title: 'Checks & Negotiation',
+    description: 'I negotiate clearly and coordinate document, title, contract, and eligibility checks with the right local professionals.',
   },
   {
     number: '04',
-    title: 'Keys in Your Hand',
-    description: 'Your property is registered in your name. I can also manage it for you if you live abroad — tenants, maintenance, everything.',
+    title: 'Handover & Owner Support',
+    description: 'After completion, I can coordinate local owner support, inspections, tenant matters, and maintenance if you live abroad.',
   },
 ]
 
@@ -38,11 +38,10 @@ export default function ProcessSteps() {
         >
           <p className="text-sm uppercase tracking-[0.3em] text-saudi-green/70 mb-4">How It Works</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            From First Call to <span className="text-gradient">Keys in Hand</span>
+            From First Brief to <span className="text-gradient">Clear Decision</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A simple, transparent process. No surprises, no hidden steps.
-            Here is exactly how we work together.
+            A structured process for overseas buyers who need local clarity before committing.
           </p>
         </motion.div>
 
@@ -76,9 +75,9 @@ export default function ProcessSteps() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-600 mb-6">Ready to start with Step 1?</p>
+          <p className="text-gray-600 mb-6">Ready to start with a clear buyer brief?</p>
           <WhatsAppButton size="lg">
-            Book Your Free Consultation
+            Send Your Property Brief
           </WhatsAppButton>
         </motion.div>
       </div>

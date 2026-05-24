@@ -8,24 +8,24 @@ import WhatsAppButton from './WhatsAppButton'
 const services = [
   {
     icon: Search,
-    title: 'Property Search & Acquisition',
-    description: 'I find and secure your ideal property in Makkah or Medinah while you stay overseas. From the first search to handing you the keys — everything is handled.',
+    title: 'Buyer Representation',
+    description: 'I help you define the brief, shortlist real options, verify key details, negotiate clearly, and coordinate the purchase process from abroad.',
     features: [
       'Personalized property matching',
       'Virtual or in-person viewings',
       'Price negotiation on your behalf',
-      'Full documentation & legal support',
+      'Documentation & professional coordination',
       'Title verification & due diligence',
       'Registration assistance',
     ],
-    cta: 'Start Your Property Search',
+    cta: 'Start a Buyer Review',
     highlight: true,
-    whatsappMessage: "Assalamu Alaikum Abdulaziz, I'm interested in your Property Search & Acquisition service. I'd like to discuss buying property in Makkah/Medinah.",
+    whatsappMessage: "Assalamu Alaikum Abdulaziz, I'm interested in buyer representation for Makkah/Medinah property. My budget, timeline, and intended use are:",
   },
   {
     icon: Building2,
-    title: 'Property Management',
-    description: 'Own property in the Holy Cities but live abroad? I manage everything — tenants, maintenance, rent collection — so your investment works for you.',
+    title: 'Owner Support',
+    description: 'Own property in Makkah or Medinah but live abroad? I coordinate tenant matters, maintenance, inspections, and reporting so the property is looked after locally.',
     features: [
       'Tenant sourcing & screening',
       'Rent collection & transfers',
@@ -34,7 +34,7 @@ const services = [
       'Monthly financial reporting',
       'Emergency response handling',
     ],
-    cta: 'Manage My Property',
+    cta: 'Discuss Owner Support',
     highlight: false,
     whatsappMessage: "Assalamu Alaikum Abdulaziz, I'm interested in your Property Management service for my property in Makkah/Medinah.",
   },
@@ -56,7 +56,7 @@ export default function ServicesPreview() {
               How I Can <span className="text-gradient">Help You</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Two focused services designed for Muslims living abroad who want to own or manage property in the Holy Cities.
+              Two focused services for serious buyers and owners who need trusted local support in Makkah or Medinah.
             </p>
           </motion.div>
         </div>
@@ -69,9 +69,9 @@ export default function ServicesPreview() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
         >
           {[
-            { icon: Clock, title: 'Save Months of Effort', desc: 'I know the market — no wasted time on unsuitable properties or unreliable sellers.' },
-            { icon: Shield, title: 'Avoid Costly Mistakes', desc: 'Title verification, legal compliance, and fair pricing — I protect your investment.' },
-            { icon: Globe, title: 'Buy From Anywhere', desc: 'Video viewings, digital paperwork, WhatsApp updates. You never need to fly in.' },
+            { icon: Clock, title: 'Save Months of Effort', desc: 'I filter weak listings early so you spend time only on options that match your brief.' },
+            { icon: Shield, title: 'Reduce Costly Mistakes', desc: 'Pricing, documents, eligibility, and building quality are reviewed before you move forward.' },
+            { icon: Globe, title: 'Work From Abroad', desc: 'Video viewings, structured updates, and local coordination keep the process moving.' },
           ].map((item, i) => (
             <div key={i} className="flex gap-4 bg-[#FBF9F4] rounded-2xl p-6 border border-[#E7D5B7]/50">
               <div className="w-12 h-12 bg-saudi-green/10 rounded-xl flex items-center justify-center flex-shrink-0">

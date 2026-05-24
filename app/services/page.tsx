@@ -4,39 +4,39 @@ import Link from 'next/link'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Services | Property Search & Management in Makkah & Medinah',
-  description: 'Property search, acquisition, and management services for Makkah and Medinah. Abdulaziz Mofleh helps Muslims worldwide own and manage Holy Cities property.',
+  title: 'Services | Buyer Representation & Owner Support',
+  description: 'Buyer representation, property shortlisting, due diligence coordination, negotiation support, and owner support for Makkah and Medinah property clients.',
 }
 
 const services = [
   {
     icon: Search,
-    title: 'Property Search & Acquisition',
-    description: 'I personally help you find and purchase your ideal property in Makkah or Medinah. From initial search to final registration, I handle everything while you\'re overseas.',
+    title: 'Buyer Representation',
+    description: 'I help you define the right brief, shortlist serious options, verify key details, negotiate clearly, and coordinate the purchase process while you are abroad.',
     features: [
       'Personalized property matching based on your needs',
       'Virtual viewings via video call or in-person tours',
       'Price negotiation on your behalf',
-      'Full documentation and paperwork support',
+      'Documentation and professional coordination',
       'Title verification and due diligence',
       'Liaison with lawyers and notaries',
       'Registration assistance',
       'Post-purchase support',
     ],
     process: [
-      { step: 'Discovery Call', desc: 'We discuss your goals, budget, and preferences' },
-      { step: 'Property Search', desc: 'I curate a selection of properties matching your criteria' },
-      { step: 'Viewings', desc: 'Virtual tours or I accompany you for in-person visits' },
-      { step: 'Negotiation', desc: 'I negotiate the best price on your behalf' },
-      { step: 'Purchase', desc: 'I handle all paperwork and coordinate with lawyers' },
-      { step: 'Registration', desc: 'Your property is officially registered in your name' },
+      { step: 'Buyer Brief', desc: 'We define your city, budget, use case, timeline, and eligibility questions' },
+      { step: 'Market Shortlist', desc: 'I filter properties against access, value, quality, and ownership fit' },
+      { step: 'Viewings', desc: 'You review options through video calls, photos, or in-person visits' },
+      { step: 'Negotiation', desc: 'I negotiate based on local pricing context and your walk-away limits' },
+      { step: 'Due Diligence', desc: 'I coordinate document review with the right local professionals' },
+      { step: 'Completion', desc: 'We follow the approved process through payment, registration, and handover' },
     ],
     highlight: true,
   },
   {
     icon: Building2,
-    title: 'Property Management',
-    description: 'Living overseas? I manage your Makkah or Medinah property so you don\'t have to worry. Ideal for rental properties, second homes, or investment units.',
+    title: 'Owner Support',
+    description: 'Already own or planning to own from abroad? I coordinate local care, reporting, tenant matters, and maintenance so your property is not left unmanaged.',
     features: [
       'Tenant sourcing and screening',
       'Lease agreement preparation',
@@ -48,11 +48,11 @@ const services = [
       'Utility and bill management',
     ],
     process: [
-      { step: 'Property Assessment', desc: 'I evaluate your property and discuss your goals' },
-      { step: 'Marketing', desc: 'I advertise to quality tenants (pilgrims, families, professionals)' },
-      { step: 'Tenant Placement', desc: 'I screen and place reliable tenants' },
-      { step: 'Ongoing Management', desc: 'I handle all day-to-day operations' },
-      { step: 'Reporting', desc: 'You receive monthly updates and financial reports' },
+      { step: 'Property Assessment', desc: 'I review the property, access, condition, and owner goals' },
+      { step: 'Readiness Plan', desc: 'We prepare repairs, photos, pricing, and tenant requirements where needed' },
+      { step: 'Tenant Placement', desc: 'I help screen and coordinate suitable tenant conversations' },
+      { step: 'Local Oversight', desc: 'I coordinate maintenance, inspections, access, and urgent issues' },
+      { step: 'Reporting', desc: 'You receive regular updates, photos, and financial summaries' },
     ],
     highlight: false,
   },
@@ -82,11 +82,11 @@ export default function ServicesPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            My <span className="text-saudi-gold">Services</span>
+            Buyer Representation &amp; <span className="text-saudi-gold">Owner Support</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
-            Two focused services to help Muslims worldwide own and manage
-            property near the Holy Mosques in Makkah and Medinah.
+            Practical support for serious buyers and owners who need trusted local
+            representation in Makkah and Medinah.
           </p>
         </div>
       </section>
@@ -130,7 +130,7 @@ export default function ServicesPage() {
                       </div>
 
                       <WhatsAppButton
-                        message={`Assalamu Alaikum Abdulaziz, I found your website and I'm interested in your ${service.title} service for property in Makkah/Medinah. Could we discuss?`}
+                        message={`Assalamu Alaikum Abdulaziz, I found your website and I'm interested in your ${service.title} service for Makkah/Medinah property. My budget, timeline, and intended use are:`}
                         size="lg"
                       >
                         Inquire About This Service
@@ -185,8 +185,8 @@ export default function ServicesPage() {
             Ready to Get Started?
           </h2>
           <p className="text-lg text-gray-200 mb-8">
-            Whether you&apos;re looking to buy or need help managing an existing property,
-            let&apos;s talk about how I can help.
+            Share your city, budget, timeline, buyer profile, and intended use.
+            I will tell you what is realistic and what needs to be checked first.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -17,13 +17,13 @@ export default function CTASection() {
         >
           <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Get Started Today</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Own Property<br />
-            <span className="text-saudi-gold">Near the Holy Mosques?</span>
+            Ready to Review Property<br />
+            <span className="text-saudi-gold">in Makkah or Medinah?</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Whether you are looking for a home near the Kaaba, an investment in Medinah,
-            or a place for your family to return to — let&apos;s make it happen.
+            Send your city, budget, timeline, intended use, and buyer profile.
+            I will help you understand what is realistic and what needs checking first.
           </p>
 
           {/* Trust Badges */}
@@ -45,7 +45,7 @@ export default function CTASection() {
               href="/contact/"
               className="inline-flex items-center justify-center space-x-2 bg-saudi-gold hover:bg-saudi-gold-dark text-white font-semibold py-4 px-10 rounded-lg transition-colors text-lg"
             >
-              <span>Book Free Consultation</span>
+              <span>Send Property Brief</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

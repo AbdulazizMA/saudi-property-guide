@@ -42,8 +42,8 @@ export default function Testimonials() {
             Trusted by Families <span className="text-gradient">Worldwide</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Hear from Muslims around the world who turned their dream of owning
-            property near the Haramain into reality.
+            Examples of the kind of clear, local support overseas buyers expect
+            when evaluating property near the Haramain.
           </p>
         </motion.div>
 

@@ -9,13 +9,13 @@ import WhatsAppButton from './WhatsAppButton'
 const proofPoints = [
   { icon: ShieldCheck, label: 'Licensed Saudi real estate guidance' },
   { icon: MapPinned, label: 'Makkah-based neighborhood insight' },
-  { icon: FileCheck2, label: 'Documented buying process' },
+  { icon: FileCheck2, label: 'Eligibility and document coordination' },
 ]
 
 const buyingSteps = [
-  ['01', 'Clarify your budget, city, timeline, and ownership needs.'],
-  ['02', 'Shortlist realistic options with photos, video, and local context.'],
-  ['03', 'Check documents, negotiate terms, and coordinate registration.'],
+  ['01', 'Clarify your city, budget, timeline, buyer profile, and intended use.'],
+  ['02', 'Shortlist realistic options with photos, video, pricing, and local context.'],
+  ['03', 'Coordinate checks, negotiate terms, and plan handover or owner support.'],
 ]
 
 export default function Hero() {
@@ -48,10 +48,10 @@ export default function Hero() {
             </div>
 
             <h1 className="mb-6 max-w-[22rem] break-words font-display text-4xl font-bold leading-[1.02] text-white sm:max-w-full sm:text-6xl lg:text-7xl">
-              Holy Cities property, handled from the ground.
+              Makkah and Medinah property, handled locally.
             </h1>
             <p className="mb-8 max-w-[22rem] text-base leading-7 text-white/85 sm:max-w-2xl sm:text-xl sm:leading-8">
-              Haramain Properties helps Muslim families buy and manage real estate
+              Haramain Properties helps serious buyers abroad evaluate property
               in Makkah and Medinah with local representation, documented steps,
               and direct access to Abdulaziz Mofleh.
             </p>
@@ -74,7 +74,7 @@ export default function Hero() {
                 href="/contact/"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/60 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-white hover:text-saudi-green"
               >
-                <span>Book a Consultation</span>
+                <span>Send Property Brief</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
@@ -93,7 +93,7 @@ export default function Hero() {
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/55">Buying path</p>
                   <h2 className="font-display text-3xl font-semibold leading-tight text-white">
-                    Search, verify, negotiate, register.
+                    Brief, shortlist, verify, negotiate.
                   </h2>
                 </div>
                 <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-saudi-gold/20">

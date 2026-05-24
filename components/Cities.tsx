@@ -9,12 +9,12 @@ const cities = [
     name: 'Makkah',
     arabicName: 'مكة المكرمة',
     englishSubtitle: 'Makkah al-Mukarramah',
-    headline: 'Own Property Near Masjid al-Haram',
-    description: 'The holiest city in Islam. Properties range from apartments in prime locations to residential compounds. Wake up to the Adhan from Masjid al-Haram. Easy access to Umrah whenever your heart desires.',
+    headline: 'Evaluate Makkah Property With Local Context',
+    description: 'Makkah is powerful, but access, traffic, building age, services, and price vary block by block. I help buyers compare options beyond the listing photos.',
     highlights: [
-      'Easy transportation to Masjid al-Haram',
-      'High rental yields during Hajj & Umrah',
-      'Growing infrastructure & development',
+      'Access and transport to Masjid al-Haram',
+      'Rental assumptions reviewed carefully',
+      'Neighborhood tradeoffs explained clearly',
     ],
     link: '/makkah/',
     stats: { growth: 'Strong', demand: 'Very High' }
@@ -23,12 +23,12 @@ const cities = [
     name: 'Medinah',
     arabicName: 'المدينة المنورة',
     englishSubtitle: 'Al-Madinah al-Munawwarah',
-    headline: 'Own Property Near the Prophet\'s Mosque',
-    description: 'The City of the Prophet. A serene environment with excellent investment potential. Properties near Masjid an-Nabawi are highly sought after for both living and pilgrimage rental.',
+    headline: 'Find the Right Medinah Fit',
+    description: 'Medinah attracts buyers looking for a calmer base near Masjid an-Nabawi. I help compare access, community feel, property condition, and long-term ownership needs.',
     highlights: [
-      'Near Masjid an-Nabawi',
+      'Access to Masjid an-Nabawi',
       'Peaceful residential communities',
-      'Consistent year-round rental demand',
+      'Ownership and management planning',
     ],
     link: '/medinah/',
     stats: { growth: 'Steady', demand: 'High' }
@@ -50,8 +50,8 @@ export default function Cities() {
               Properties in the <span className="text-gradient">Holy Cities</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We specialize exclusively in Makkah and Medinah - helping Muslims worldwide
-              own property in the most blessed places on earth.
+              Focused local support for overseas buyers comparing Makkah and Medinah
+              property with a serious process.
             </p>
           </motion.div>
         </div>

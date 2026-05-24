@@ -10,10 +10,10 @@ const siteUrl = new URL(siteConfig.siteUrl)
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: 'Haramain Properties | Buy Property in Makkah & Medinah | Real Estate Near the Holy Mosques',
-    template: '%s | Haramain Properties - Makkah & Medinah Real Estate',
+    default: 'Haramain Properties | Makkah & Medinah Buyer Representation',
+    template: '%s | Haramain Properties',
   },
-  description: 'Haramain Properties helps Muslims worldwide own property near the Holy Mosques in Makkah and Medinah. Founded by Abdulaziz Mofleh, a Makkah local and US-educated licensed real estate agent.',
+  description: 'Local buyer representation for serious overseas clients exploring property in Makkah and Medinah. Led by Abdulaziz Mofleh, a Makkah-based licensed real estate agent.',
   keywords: siteConfig.keywords,
   authors: [{ name: 'Haramain Properties' }],
   creator: 'Haramain Properties',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Haramain Properties | Buy Property Near the Holy Mosques',
-    description: 'Your gateway to owning property in Makkah and Medinah. Haramain Properties, founded by Makkah local Abdulaziz Mofleh.',
+    title: 'Haramain Properties | Makkah & Medinah Buyer Representation',
+    description: 'A clearer way to evaluate Makkah and Medinah property from abroad: local shortlisting, verification, negotiation, and owner support.',
     type: 'website',
     url: siteConfig.siteUrl,
     siteName: siteConfig.siteName,
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Haramain Properties | Makkah & Medinah Real Estate',
-    description: 'Your gateway to owning property near the Holy Mosques. Founded by Makkah local Abdulaziz Mofleh.',
+    title: 'Haramain Properties | Makkah & Medinah Buyer Representation',
+    description: 'Local property guidance for serious buyers exploring Makkah and Medinah from abroad.',
     images: ['https://images.unsplash.com/photo-1565552684305-7e8ce3cc17d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'],
   },
   robots: {
@@ -68,7 +68,7 @@ const structuredData = {
       '@type': 'RealEstateAgent',
       '@id': `${siteConfig.siteUrl}/#organization`,
       name: 'Haramain Properties',
-      description: 'Real estate company specializing in Makkah and Medinah properties for Muslim diaspora worldwide',
+      description: 'Real estate buyer representation and owner support for Makkah and Medinah property clients',
       url: siteConfig.siteUrl,
       telephone: siteConfig.contact.phone,
       email: siteConfig.contact.email,
@@ -107,7 +107,7 @@ const structuredData = {
       '@id': `${siteConfig.siteUrl}/#person`,
       name: 'Abdulaziz Mofleh',
       jobTitle: 'CEO & Founder of Haramain Properties',
-      description: 'Makkah local, US-educated real estate professional helping Muslims worldwide own property near the Holy Mosques',
+      description: 'Makkah-based real estate professional helping international buyers evaluate property in Makkah and Medinah',
       knowsLanguage: ['en', 'ar', 'ur'],
       workLocation: {
         '@type': 'Place',

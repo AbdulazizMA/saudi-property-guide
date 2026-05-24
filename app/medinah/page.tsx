@@ -4,8 +4,8 @@ import { MapPin, TrendingUp, Home, CheckCircle, ArrowRight, Building, Heart } fr
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Buy Property in Medinah | Own a Home Near the Prophet\'s Mosque',
-  description: 'Properties in Medinah near Masjid an-Nabawi. Licensed agent helping Muslims buy property in the City of the Prophet. Contact Abdulaziz Mofleh.',
+  title: 'Medinah Property Buyer Representation',
+  description: 'Explore Medinah property options with local buyer representation, neighborhood guidance, eligibility review, negotiation, and owner support.',
   keywords: [
     'buy property in Medinah',
     'Medinah real estate',
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
     'property near Masjid Nabawi',
   ],
   openGraph: {
-    title: 'Buy Property in Medinah | Own a Home Near the Prophet\'s Mosque',
-    description: 'Licensed real estate agent helping Muslims worldwide own property near Masjid an-Nabawi in Medinah.',
+    title: 'Medinah Property Buyer Representation',
+    description: 'Local guidance for serious buyers evaluating property options in Medinah.',
   },
 }
 
 const propertyTypes = [
   {
     name: 'Apartments',
-    description: 'Modern units in prime locations near the Prophet\'s Mosque',
+    description: 'Modern units reviewed for access, building quality, services, and value',
     icon: Building,
   },
   {
@@ -35,7 +35,7 @@ const propertyTypes = [
   },
   {
     name: 'Investment Properties',
-    description: 'Units with strong rental potential for pilgrims',
+    description: 'Units assessed for realistic demand, operating costs, and management needs',
     icon: TrendingUp,
   },
 ]
@@ -65,20 +65,20 @@ const neighborhoods = [
 
 const faqs = [
   {
-    question: 'Can foreigners buy property in Medinah?',
-    answer: 'Yes, under Saudi Arabia\'s property reforms, eligible foreigners can purchase property in designated areas of Medinah. I can guide you through the eligibility requirements.',
+    question: 'Can non-Saudis buy property in Medinah?',
+    answer: 'Eligibility depends on nationality, residency status, property type, location, and current rules. I help buyers review their profile first, then confirm the available path before they spend time on the wrong listings.',
   },
   {
     question: 'How is Medinah different from Makkah for property investment?',
-    answer: 'Medinah offers a more serene environment with generally lower prices than Makkah. It\'s ideal for those seeking a peaceful retirement near the Prophet\'s Mosque or a family home.',
+    answer: 'Medinah often attracts buyers who want a calmer lifestyle, family use, or long-term ownership near Masjid an-Nabawi. The right choice depends on access, budget, building quality, and how you plan to use the property.',
   },
   {
     question: 'What is the rental market like in Medinah?',
-    answer: 'Medinah has consistent year-round demand from visitors to the Prophet\'s Mosque, though it\'s less seasonal than Makkah. Many owners rent their properties when visiting for Hajj in Makkah.',
+    answer: 'Demand can be steady in the right location, but returns depend on access, licensing, property condition, operating costs, and management. I help you review assumptions before treating a unit as an investment.',
   },
   {
     question: 'What makes Medinah special for Muslims?',
-    answer: 'Medinah is the City of the Prophet (PBUH), home to Masjid an-Nabawi where he is buried. Living here means being near his blessed resting place and praying in one of the holiest mosques in Islam.',
+    answer: 'Medinah is the City of the Prophet, home to Masjid an-Nabawi and a place many families want to return to regularly. A property here should serve both your spiritual goals and your practical family needs.',
   },
 ]
 
@@ -151,25 +151,25 @@ export default function MedinahPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <p className="text-saudi-gold font-arabic text-2xl mb-4">المدينة المنورة</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Buy Property in <span className="text-saudi-gold">Medinah</span>
+            Medinah Property, <span className="text-saudi-gold">Chosen Carefully</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-            Own a home in the City of the Prophet. Experience the tranquility of Medinah
-            and live near Masjid an-Nabawi, one of the holiest sites in Islam.
+            For overseas buyers seeking a calmer base near Masjid an-Nabawi, with local
+            guidance on neighborhoods, pricing, eligibility, and long-term ownership.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton
-              message="Assalamu Alaikum Abdulaziz, I found your website and I'm interested in buying property in Medinah. Could we discuss my options?"
+              message="Assalamu Alaikum Abdulaziz, I found your Medinah page and want to review property options. My budget, timeline, and intended use are:"
               size="lg"
             >
-              Inquire About Medinah Properties
+              Review Medinah Options
             </WhatsAppButton>
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center space-x-2 bg-white text-saudi-green font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
-              <span>Book Consultation</span>
+              <span>Send Property Brief</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -181,20 +181,20 @@ export default function MedinahPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Steady</p>
-              <p className="text-gray-600 text-sm">Market Growth</p>
+              <p className="text-3xl font-bold text-saudi-green">Calm</p>
+              <p className="text-gray-600 text-sm">Residential Appeal</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Consistent</p>
-              <p className="text-gray-600 text-sm">Rental Demand</p>
+              <p className="text-3xl font-bold text-saudi-green">Clear</p>
+              <p className="text-gray-600 text-sm">Eligibility Review</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Peaceful</p>
-              <p className="text-gray-600 text-sm">Environment</p>
+              <p className="text-3xl font-bold text-saudi-green">Vetted</p>
+              <p className="text-gray-600 text-sm">Property Shortlists</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-saudi-green">Growing</p>
-              <p className="text-gray-600 text-sm">Infrastructure</p>
+              <p className="text-3xl font-bold text-saudi-green">Local</p>
+              <p className="text-gray-600 text-sm">Buyer Representation</p>
             </div>
           </div>
         </div>
@@ -205,10 +205,10 @@ export default function MedinahPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Own Property in <span className="text-gradient">Medinah</span>?
+              Why Buyers Focus on <span className="text-gradient">Medinah</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              The City of the Prophet offers a unique combination of spiritual significance and peaceful living.
+              Medinah appeals to buyers who want a meaningful place to stay, a calmer pace, and a purchase that still makes practical sense.
             </p>
           </div>
 
@@ -217,11 +217,11 @@ export default function MedinahPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Spiritual Significance</h3>
               <ul className="space-y-3">
                 {[
-                  'Live near Masjid an-Nabawi - the Prophet\'s Mosque',
-                  'Visit the blessed resting place of Prophet Muhammad (PBUH)',
-                  'Pray in the second holiest mosque in Islam',
-                  'Experience the unique tranquility of Medinah',
-                  'Visit historical Islamic sites like Masjid Quba',
+                  'Compare realistic access to Masjid an-Nabawi',
+                  'Choose a calm setting that suits family visits',
+                  'Plan regular stays with fewer logistical surprises',
+                  'Understand nearby services, transport, and daily convenience',
+                  'Balance spiritual value with practical ownership needs',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <Heart className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
@@ -235,11 +235,11 @@ export default function MedinahPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Practical Benefits</h3>
               <ul className="space-y-3">
                 {[
-                  'More affordable than Makkah properties',
-                  'Peaceful, family-friendly environment',
-                  'Growing infrastructure and amenities',
-                  'Steady property appreciation potential',
-                  'Year-round rental demand from visitors',
+                  'Often more approachable pricing than central Makkah',
+                  'Peaceful residential districts for family use',
+                  'Neighborhoods with improving services and amenities',
+                  'Long-term appeal for buyers seeking regular visits',
+                  'Rental assumptions reviewed against local realities',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-saudi-green flex-shrink-0 mt-0.5" />
@@ -328,20 +328,19 @@ export default function MedinahPage() {
       <section className="py-20 bg-gradient-to-br from-saudi-green to-saudi-green-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Own Property in Medinah?
+            Ready to Evaluate Medinah Seriously?
           </h2>
           <p className="text-lg text-gray-200 mb-8">
-            Let me help you find your perfect property near Masjid an-Nabawi.
-            I&apos;ll guide you through the entire process while you&apos;re overseas.
+            Share your budget, buyer profile, timeline, and reason for buying. I will help you understand which Medinah options are worth your attention.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton
-              message="Assalamu Alaikum Abdulaziz, I found your Medinah properties page and I'd like to learn more about buying near Masjid an-Nabawi. Could we talk?"
+              message="Assalamu Alaikum Abdulaziz, I found your Medinah properties page. I want a serious review of available options. My budget, timeline, and intended use are:"
               size="lg"
               variant="white"
             >
-              Chat About Medinah Properties
+              Start a Medinah Review
             </WhatsAppButton>
           </div>
 

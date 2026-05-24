@@ -6,23 +6,23 @@ import { Shield, TrendingUp, FileCheck, Headphones, Building, Award } from 'luci
 const benefits = [
   {
     icon: Shield,
-    title: 'Clear Ownership Pathways',
-    description: 'We help you navigate eligibility and ownership structures in designated areas and approved projects.'
+    title: 'Eligibility First',
+    description: 'We review buyer profile, location, and transaction route before treating any listing as viable.'
   },
   {
     icon: TrendingUp,
-    title: 'Market Momentum',
-    description: 'Major development projects and urban expansion are creating new demand across key cities.'
+    title: 'Local Market Context',
+    description: 'We compare asking prices, access, building quality, and neighborhood tradeoffs with local judgment.'
   },
   {
     icon: FileCheck,
-    title: 'Vision 2030 Growth',
-    description: 'Large-scale infrastructure and economic diversification are reshaping housing and commercial needs.'
+    title: 'Development Awareness',
+    description: 'Infrastructure and urban growth can affect demand, but each purchase still needs property-level review.'
   },
   {
     icon: Building,
-    title: 'Premium Developments',
-    description: 'Access modern communities, mixed-use districts, and new developments built to global standards.'
+    title: 'Property-Level Review',
+    description: 'We look past brochures and check layout, access, services, delivery status, and ongoing costs.'
   },
   {
     icon: Headphones,
@@ -48,11 +48,11 @@ export default function Benefits() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Invest in <span className="text-gradient">Saudi Real Estate</span>
+              Why Work With <span className="text-gradient">Local Representation</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover the compelling advantages that make Saudi Arabia one of the most 
-              attractive real estate markets for international investors.
+              Overseas buyers need more than listings. They need local checks, clear documents,
+              realistic numbers, and a process that reduces avoidable mistakes.
             </p>
           </motion.div>
         </div>
